@@ -1,0 +1,99 @@
+/* Element styles */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -455px left -366px, 120% -55%;
+  background-color: hsl(185, 75%, 39%);
+}
+
+/* Classes */
+
+.attribution {
+  margin-top: 50px;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 100%, 28%);
+}
+.card {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 320px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px 6px hsl(229, 23%, 23%, 0.1);
+}
+
+.card > .cover {
+  background: url(./images/bg-pattern-card.svg) repeat-x;
+  height: 40%;
+  border-radius: 20px 20px 0px 0px;
+  background-size: cover;
+}
+
+.card > .details {
+  height: 60%;
+  background-color: #fff;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.profile-image > img {
+  border-radius: 50px;
+  border: 5px #fff solid;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-image > p {
+  position: relative;
+  top: -20px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.details > .user-details {
+  border-top: 1px solid hsl(0, 0%, 59%, 0.3);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.details > .user-details > p {
+  margin: 0px 20px;
+  font-size: 18px;
+}
+
+.details > .user-details > p > span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin: 5px 0 0 0;
+}
+
+/* Utility classes */
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-muted {
+  font-weight: normal;
+  color: hsl(0, 0%, 59%);
+}
