@@ -3,17 +3,132 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  outline: 0;
 }
 
 body {
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
+  background-color: hsl(204, 43%, 93%);
 }
 
 /* Classes */
 
+.price-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* border: 1px solid; */
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 720px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.description-box {
+  height: 45%;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px 15px 0 0;
+}
+
+.description-box > .heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: hsl(179, 62%, 43%);
+}
+
+.description-box > .sub-heading {
+  color: hsl(71, 73%, 54%);
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.description-box > .description {
+  width: 100%;
+  font-size: 16px;
+  word-spacing: 7px;
+  line-height: 1.8;
+  color: hsla(218, 22%, 67%, 0.6);
+  font-weight: 700;
+}
+
+.pricing {
+  padding: 16px;
+  width: 360px;
+  background-color: hsl(179, 62%, 43%);
+  height: 55%;
+  border-radius: 0 0 0 16px;
+  margin: 0px;
+  padding: 40px;
+  float: left;
+}
+
+.pricing > .heading,
+.reason > .heading {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pricing > .amount {
+  font-size: 32px;
+  color: #fff;
+  margin: 20px 0 0 0;
+  font-weight: 700;
+}
+
+.pricing > .amount > span {
+  font-size: 16px;
+  color: hsl(179deg 74% 71%);
+  vertical-align: middle;
+  margin: 0 0 0 10px;
+  font-weight: 400;
+}
+
+.pricing > .sub-heading {
+  color: #fff;
+  margin: 10px 0 0 0;
+}
+
+.pricing > .signup-button {
+  width: 100%;
+  margin: 30px 0 0 0;
+  padding: 15px;
+  color: #fff;
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.reason {
+  padding: 40px;
+  width: 360px;
+  float: right;
+  background-color: hsl(179deg 62% 43% / 75%);
+  height: 55%;
+  margin: 0px;
+  border-radius: 0 0 16px 0;
+  float: left;
+}
+
+.reason > .list {
+  list-style-type: none;
+  margin: 15px 0 0 0;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .attribution {
   font-size: 11px;
+  display: block;
   text-align: center;
+  margin-top: 50px;
 }
 
 .attribution a {
@@ -21,3 +136,28 @@ body {
 }
 
 /* Utility Classes */
+
+@media screen and (max-width: 766px) and (orientation: portrait) {
+  .price-card {
+    top: 50%;
+    height: auto;
+  }
+
+  .description-box {
+    width: 80%;
+    margin-left: 0px;
+  }
+
+  .pricing,
+  .reason {
+    width: 80%;
+    border-radius: 0;
+    height: auto;
+    /* width: auto; */
+  }
+
+  .attribution {
+     display: inline-block;
+     margin: 20px;
+  }
+}
