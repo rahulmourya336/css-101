@@ -1,0 +1,117 @@
+body {
+  font-family: 'Space Mono', monospace;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 40px 40px 0px 40px;
+}
+
+p.logo {
+  font-family: 'Inconsolata', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  width: 50%;
+  display: inline-block;
+}
+
+.hero-image > img {
+  height: auto;
+  width: 80%;
+}
+
+.hero-content {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+}
+
+.hero-heading {
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 95px;
+  letter-spacing: -0.035em;
+}
+
+.hero-sub-heading {
+    margin-top: 36px;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.035em;
+  word-wrap: break-word;
+}
+
+.back-btn {
+  text-transform: uppercase;
+  width: 216px;
+  height: 68px;
+  border: none;
+  background-color: #333333;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 64px;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    color: #000;
+    margin-top: 30px;
+  }
+  
+/* Portrait */
+@media screen /* and (device-width: 360px) and (device-height: 640px) */ and (orientation: portrait) {
+  .container {
+    margin: 10px;
+  }
+  .hero-image {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .hero-content{
+      width: 100%;
+  }
+
+  .hero-heading {
+    font-size: 48px;
+    line-height: 71px;
+  }
+
+  .hero-sub-heading {
+      margin-top: 30px;
+  }
+
+  .back-btn {
+      margin-top: 66px;
+  }
+
+  .hero-sub-heading {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  footer {
+    margin-top: 80px;
+  }
+}
