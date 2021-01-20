@@ -1,0 +1,128 @@
+* {
+  outline: 0;
+}
+body {
+  background-image: url('./images/bg-pattern-desktop.svg');
+  background-size: cover;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  outline: 0;
+}
+
+p {
+  margin: 0px;
+}
+
+header {
+  padding: 50px 0 100px 100px;
+  margin: 0;
+}
+
+.text-ui {
+  width: 700px;
+  margin: 0 auto;
+  float: left;
+}
+
+.image-ui {
+  width: 700px;
+  margin: 0 auto;
+  float: right;
+  height: 100vh;
+}
+
+p.hero-text {
+  font-weight: 300;
+  font-size: 80px;
+  display: inline-block;
+  padding: 50px 0 20px 100px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: hsl(0, 36%, 70%);
+}
+
+.text-bold {
+  display: block;
+  font-weight: bold;
+  color: #000;
+}
+
+.description {
+  padding: 0 100px;
+  font-size: 16px;
+  color: hsl(0, 36%, 70%);
+  width: 25%;
+  line-height: 1.8em;
+}
+
+.email-form {
+  padding: 50px 0 20px 100px;
+}
+
+.form-control {
+  border-radius: 50em;
+  padding: 20px;
+  width: 30%;
+  border: 2px solid #e7e7e7;
+  padding-left: 40px;
+}
+
+.icon-button {
+  position: relative;
+  left: -100px;
+  top: 3px;
+  padding: 18px;
+  border: none;
+  border-radius: 50em;
+  width: 110px;
+  font-size: 16px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  cursor: pointer;
+  box-shadow: hsl(0, 36%, 70%) 0px 18px 50px 0px;
+}
+
+.icon-button:hover {
+  box-shadow: -1px 11px 30px -10px rgba(0, 0, 0, 0.75);
+  background-image: linear-gradient(135deg, hsl(0, 92%, 91%), hsl(0, 84%, 80%));
+}
+
+.form-control:focus {
+  border: 2px solid hsl(0, 93%, 68%);
+}
+
+.error-icon {
+  position: relative;
+  left: -110px;
+  top: 10px;
+}
+
+.submit-icon {
+  padding: 0px;
+  margin: 0px;
+}
+
+::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+
+#form-error-message {
+  color: hsl(0, 93%, 68%);
+  display: block;
+  margin: 10px 0 0 40px;
+}
+
+.show {
+  visibility: unset;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (orientation: portrait) {
+
+}

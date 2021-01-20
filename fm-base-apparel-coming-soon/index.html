@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Base Apparel coming soon page | Rahul Mourya</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+  </head>
+  <body>
+    <div class="text-ui">
+      <header>
+        <img src="./images/logo.svg" alt="logo" />
+      </header>
+    </div>
+
+    <div class="image-ui">
+      <img src="./images/hero-desktop.jpg" alt="hero image" />
+    </div>
+
+    <div class="welcome-text">
+      <p class="hero-text">
+        We're <span class="text-bold">coming <br />soon</span>
+      </p>
+    </div>
+    <p class="description">
+      Hello fellow shoppers! We're currently building our new fashion store. Add
+      your email below to stay up-to-date with announcements and our launch
+      deals.
+    </p>
+
+    <div role="form" class="email-form">
+      <input
+        class="form-control"
+        type="email"
+        required
+        placeholder="Email Address"
+        id="inputValue"
+      />
+      <img
+        src="./images/icon-error.svg"
+        alt="error-icon"
+        class="error-icon hide"
+        id="error-icon"
+      />
+      <button class="icon-button" onclick="validateEmailAddress()">
+        <img src="./images/icon-arrow.svg" class="submit-icon" />
+      </button>
+      <span id="form-error-message" class="hide">
+        Please provide a valid email
+      </span>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function validateEmailAddress() {
+      const inputValue = getElementById('inputValue');
+      const errorTextHTML = getElementById('form-error-message');
+      const errorIconHTML = getElementById('error-icon');
+      const validInput = !!(
+        inputValue.value && isValidEmailAddress(inputValue.value)
+      );
+      toggleError(!validInput);
+    }
+
+    getElementById = (idName) => document.getElementById(idName);
+
+    function toggleError(showError = false) {
+      const errorTextHTML = getElementById('form-error-message');
+      const errorIconHTML = getElementById('error-icon');
+      if (errorTextHTML && errorIconHTML) {
+        errorTextHTML.classList.remove(showError ? 'hide' : 'show');
+        errorTextHTML.classList.add(showError ? 'show' : 'hide');
+
+        errorIconHTML.classList.remove(showError ? 'hide' : 'show');
+        errorIconHTML.classList.add(showError ? 'show' : 'hide');
+      }
+    }
+
+    function isValidEmailAddress(email) {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    }
+  </script>
+</html>
