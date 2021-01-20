@@ -1,0 +1,121 @@
+/* Figma design link: https://www.figma.com/file/F8d1qJsorEdY47N74HLxQ4/team-page-challenge?node-id=1%3A2 */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  margin: 60px 100px 0px 100px;
+  padding: 20px;
+  border: 1px solid lightgray;
+}
+
+.heading {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.intro {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  width: 48%;
+  display: inline-block;
+}
+
+.intro-description {
+  display: block;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  width: 60%;
+  margin-top: 10px;
+}
+
+.members-list > div {
+  margin: 0px 50px 0px 0px;
+}
+.members-list > div > img {
+  height: 426.5px;
+  width: auto;
+}
+
+.member-position {
+  font-family: PT Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000000;
+  transform: rotate(90deg);
+  float: right;
+  /* margin: 0px 0px 0px 10px; */
+  transform-origin: 10px;
+}
+
+.member-name {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  margin-top: 15px;
+}
+
+.members-list {
+  position: relative;
+}
+
+.members-list > div:nth-child(odd) {
+  margin-top: 40px;
+  display: inline-block;
+
+  position: relative;
+  bottom: 50%;
+  top: 40%;
+}
+
+.members-list > div:nth-child(even) {
+  margin-top: 40px;
+  display: inline-block;
+  position: relative;
+  bottom: 50%;
+  top: 40%;
+}
+
+/* Portrait */
+@media screen and (orientation: portrait) {
+  .container {
+    margin: 10px;
+  }
+  .heading,
+  .intro,
+  .intro-description {
+    width: 100%;
+  }
+
+  .intro {
+    margin-top: 38px;
+  }
+}
