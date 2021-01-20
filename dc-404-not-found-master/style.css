@@ -72,6 +72,11 @@ p.logo {
   margin-top: 64px;
 }
 
+button > a {
+  text-decoration: none;
+  color: inherit;
+}
+
 footer {
     display: block;
     text-align: center;
