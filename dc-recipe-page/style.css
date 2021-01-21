@@ -1,0 +1,271 @@
+/* Figma Design URL: https://www.figma.com/file/2jVBTSKeCYF0dIN6fi0stX/recipe-blog-challenge */
+
+:root {
+  --orange: #f2994a;
+  --grey: #bdbdbd;
+  --dark-grey: #a9a9a9;
+  --montserrat-family: 'Montserrat', sans-serif;
+  --Playfair-display-family: 'Playfair Display', serif;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--montserrat-family);
+}
+
+.container {
+  width: 75%;
+  margin: 52px auto;
+}
+
+h1 {
+  font-family: var(--Playfair-display-family);
+  font-size: 48px;
+}
+
+.blockquote {
+  margin: 12px 0 0 10px;
+  width: 50%;
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.recipe-image {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  margin-top: 18px;
+}
+
+.ingredients {
+  margin-top: 48px;
+}
+
+.recipe-summary {
+  float: right;
+  padding: 50px 40px;
+  border: 1px solid pink;
+  height: 367px;
+  width: 25%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.material-icons {
+  font-size: 32px;
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.info > .title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.info {
+  display: inline-block;
+  margin: 0 0 42px 14px;
+}
+
+.info > .value {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--orange);
+  margin: 4px 0 0 0;
+}
+
+.directions {
+  float: left;
+  width: 75%;
+}
+
+p.heading,
+p.heading-2 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+p.heading-2 {
+  margin: 28px 0;
+}
+
+p.sub-heading {
+  margin: 32px 0;
+  font-family: Playfair Display;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+p.sub-heading-1 {
+  font-family: Playfair Display;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 38px 0 38px 0;
+}
+
+.list-part-1 > p {
+  margin: 0 0 14px 0;
+}
+
+.list-part-1 > span {
+  vertical-align: middle;
+}
+
+input[type='checkbox'] {
+  height: 21px;
+  width: 21px;
+  margin-right: 18px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+i {
+  font-style: italic;
+}
+.steps {
+  margin: 0 0 31px 0px;
+}
+.steps-count {
+  height: 36px;
+  width: 36px;
+  background-color: var(--orange);
+  color: #fff;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 6px;
+  margin: 0 15px 0 0;
+}
+
+.steps > .value {
+  display: inline;
+  line-height: 150%;
+}
+
+.source {
+  color: var(--grey);
+}
+
+footer {
+  clear: both;
+  padding: 100px 0 0 0;
+  text-align: center;
+  color: var(--dark-grey);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .blockquote {
+    font-size: 12px;
+    line-height: 15px;
+    width: 100%;
+  }
+
+  .material-icons {
+    font-size: 24px;
+  }
+
+  .recipe-summary {
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    margin: 0 0 0 40px;
+    padding: 12px;
+    height: auto;
+  }
+
+  .overview:nth-child(1) {
+    clear: both;
+  }
+
+  .overview:not(:first-of-type) {
+    width: 30%;
+    display: inline-block;
+  }
+  .info > .title {
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .info > .value {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .ingredients {
+    margin: 24px 0 0 0;
+  }
+
+  .directions {
+    width: 100%;
+  }
+
+  p.heading {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  p.sub-heading {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 13px 0 24px 0;
+  }
+
+  .list-part-1 {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .steps {
+    margin: 0 0 25px 0px;
+    font-size: 16px;
+  }
+
+  .steps-count {
+    font-size: 24px;
+  }
+}
