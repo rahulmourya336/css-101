@@ -48,7 +48,7 @@ body {
   text-decoration: none;
   list-style: none;
   display: inline;
-  margin: 0px 86px 0 0;
+  margin: 0px 0px 0 86px;
   cursor: pointer;
 }
 
@@ -90,6 +90,11 @@ main .sub-heading {
   margin: 48px 0 0 0;
   display: block;
   cursor: pointer;
+}
+
+.read-more > .right-arrow {
+  margin: 0 0 0 10px;
+  vertical-align: middle;
 }
 
 .interior-image {
@@ -146,21 +151,26 @@ main .sub-heading {
   color: #828282;
 }
 
- hr {
-     visibility: hidden;
-     margin: 30px 0 10px 0;
- }
+hr {
+  visibility: hidden;
+  margin: 30px 57px 10px 57px;
+}
 
- footer {
-     clear: both;
-     text-align: center;
-     margin: 0 auto;
-     padding-top: 140px;
- }
+footer {
+  clear: both;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 140px;
+  color: #a9a9a9;
+}
+
+.vertical-menu {
+  display: none;
+}
 
 /* Portrait */
-/* Portrait */
-@media screen and (max-width: 1060px) and (orientation: portrait) {
+@media screen and (max-width: 1060px),
+  (max-width: 1300) and (orientation: portrait) {
   .container {
     margin: 12px;
   }
@@ -202,11 +212,31 @@ main .sub-heading {
   }
 
   hr {
-      visibility: visible;
+    visibility: visible;
   }
-
 
   .decorator-card > .description {
     font-size: 18px;
+  }
+
+  .horizontal-menu {
+    display: none;
+  }
+
+  .menu > .vertical-menu {
+    display: inline;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    bottom: 0px;
+    margin: 0px;
+    transform: rotate(90deg);
+    height: 40px;
+  }
+
+  .menu > .vertical-menu > li {
+    /* display: inline-block; */
+    margin: 3px;
+    border: 1px solid #fff;
   }
 }

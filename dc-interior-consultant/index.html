@@ -22,6 +22,11 @@
       href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Interior consultant | Dev challenges | Rahul Mourya</title>
   </head>
@@ -30,11 +35,16 @@
       <nav>
         <div class="site-logo">This Interior</div>
         <div class="menu">
-          <ul>
+          <ul role="navigation" class="horizontal-menu">
             <li class="active">Home</li>
             <li>Collection</li>
             <li>About</li>
             <li>Contact</li>
+          </ul>
+          <ul class="vertical-menu" role="checkbox">
+            <li></li>
+            <li></li>
+            <li></li>
           </ul>
         </div>
       </nav>
@@ -45,7 +55,7 @@
           <div class="sub-heading">
             A full-Service residential & commercial interior design and staging
             company offering professional organizing & eco-services.
-            <span class="read-more">Read More </span>
+            <span class="read-more">Read More <span class="fa fa-long-arrow-right right-arrow"></span></span>
           </div>
         </div>
 
