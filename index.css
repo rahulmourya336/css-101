@@ -46,6 +46,11 @@ h1 > img {
     rgb(66, 140, 250)
   );
   border-image-slice: 1;
+  transition: all;
+}
+
+.card:hover {
+  box-shadow: rgba(53, 53, 53, 0.08) 0px 14px 12px;
 }
 
 .card-body {
