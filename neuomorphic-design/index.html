@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>.: Neuomorphic Design :.</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <div class="back"><span class="material-icons"> arrow_back </span></div>
+        <div class="menu"><span class="material-icons"> menu </span></div>
+      </div>
+
+      <div class="playing">
+        <div class="album-art">
+          <span class="material-icons"> album </span>
+        </div>
+
+        <div class="playing-details">
+          <p class="title">Lose it</p>
+          <p class="artist">Flume ft. Vic Mensa</p>
+        </div>
+      </div>
+
+      <div class="track-head">
+        <div class="duration">
+          <p class="current-duration">1.21</p>
+          <p class="end-duration">3.46</p>
+        </div>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="myRange"
+        />
+      </div>
+
+      <div class="track-action">
+        <div class="backward">
+          <span class="material-icons"> skip_previous </span>
+        </div>
+        <div class="pause"><span class="material-icons"> pause </span></div>
+        <div class="forward">
+          <span class="material-icons"> skip_next </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d9d9d9;
+  font-family: 'Raleway', sans-serif;
+}
+
+.material-icons {
+    cursor: pointer;
+}
+
+.container {
+  width: 55%;
+  /* border: 1px solid red; */
+  margin: 40px auto;
+  border-radius: 50px;
+  box-shadow: -6px 6px 13px #cacaca, 6px -6px 13px #e8e8e8;
+  padding: 30px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back,
+.menu {
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow: 10px 10px 26px #acacac, -10px -10px 26px #ffffff;
+  padding: 15px;
+}
+
+.playing {
+  text-align: center;
+}
+
+.album-art > .material-icons {
+  margin: 0 auto;
+  background: #e0e0e0;
+  box-shadow: 10px 10px 26px #acacac, -10px -10px 26px #ffffff;
+  font-size: 30em;
+  border-radius: 55px;
+  color: #acacac;
+}
+
+.playing-details > .title {
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.playing-details > .artist {
+  margin-top: 10px;
+  color: #acacac;
+}
+
+.duration {
+  color: #acacac;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider {
+  margin-top: 10px;
+  /* -webkit-appearance: none; */
+  width: 100%;
+  height: 10px;
+  background: #9c9c9c;
+  outline: none;
+  opacity: 1;
+  border-radius: 55px;
+  box-shadow: inset 10px 10px 20px #c3c3c3, inset -10px -10px 20px #fdfdfd;
+}
+
+.slider::-webkit-slider-thumb {
+  /* -webkit-appearance: none;
+  appearance: none; */
+  width: 10%;
+  background: #08ff10;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  color: #13bba4;
+}
+
+.track-action {
+    margin: 20px 0 0 0;
+}
+
+.backward, .pause, .forward { 
+    height: 30px;
+    width: 30px;
+    border-radius: 55px;
+    box-shadow:  10px 10px 69px #9b9b9b,
+    -10px -10px 69px #ffffff;
+    padding: 40px;
+    margin: 0 30px 0 0;
+    border: 4px solid rgb(154 154 154 / 11%);
+}
+
+.backward > span, .pause > span, .forward > span{
+    margin: -12px;
+}
+
+.pause {
+    background-color: #2C77CD;
+    color: white;
+}
+
+.track-action {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        width: 95%;
+    }
+
+    .playing {
+        margin-top: 20px;
+    }
+    .playing-details > .title {
+        font-size: 1.5em;
+    }
+    .playing-details > .artist {
+        font-size: 0.8em;
+    }
+
+    .album-art > .material-icons {
+        font-size: 25em;
+    }
+}
