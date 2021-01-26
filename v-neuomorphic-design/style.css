@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  width: 55%;
+  width: 40%;
   /* border: 1px solid red; */
   margin: 40px auto;
   border-radius: 50px;
@@ -45,7 +45,7 @@ body {
   margin: 0 auto;
   background: #e0e0e0;
   box-shadow: 10px 10px 26px #acacac, -10px -10px 26px #ffffff;
-  font-size: 30em;
+  font-size: 20em;
   border-radius: 55px;
   color: #acacac;
 }
@@ -121,6 +121,15 @@ body {
   margin: -12px;
 }
 
+.backward:active,
+.forward:active {
+  box-shadow: inset 10px 10px 20px #c3c3c3, inset -10px -10px 20px #fdfdfd;
+}
+
+.pause:active {
+  box-shadow: inset 10px 10px 20px #043a77, inset -10px -10px 20px #0d5ab3;
+}
+
 .pause {
   background-color: #2c77cd;
   color: white;
@@ -131,7 +140,13 @@ body {
   justify-content: center;
 }
 
-@media screen and (max-width: 450px) {
+@media only screen and (max-width: 1200px) {
+  .album-art > .material-icons {
+    font-size: 15em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
   .container {
     width: 95%;
   }
@@ -147,6 +162,6 @@ body {
   }
 
   .album-art > .material-icons {
-    font-size: 25em;
+    font-size: 15em;
   }
 }
