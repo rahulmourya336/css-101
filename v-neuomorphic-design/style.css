@@ -82,16 +82,23 @@ body {
 .slider::-webkit-slider-thumb {
   /* -webkit-appearance: none;
   appearance: none; */
-  width: 10%;
-  background: #08ff10;
+  width: 25px;
+  height: 25px;
+  background: #2c77cd;
   cursor: pointer;
+  box-shadow: inset 10px 10px 20px #c3c3c3, inset -10px -10px 20px #fdfdfd;
+  border-radius: 55px;
+  border: none;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: #4caf50;
+  background: #2c77cd;
   cursor: pointer;
+  border-radius: 55px;
+  border: none;
+  box-shadow: inset 10px 10px 20px #c3c3c3, inset -10px -10px 20px #fdfdfd;
 }
 
 .slider::-webkit-slider-runnable-track {
@@ -122,7 +129,7 @@ body {
 }
 
 .backward:active,
-.forward:active {
+.forward:active, .back:active, .menu:active {
   box-shadow: inset 10px 10px 20px #c3c3c3, inset -10px -10px 20px #fdfdfd;
 }
 
