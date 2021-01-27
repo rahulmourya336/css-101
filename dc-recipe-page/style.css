@@ -131,13 +131,18 @@ p.sub-heading-1 {
 }
 
 .list-part-1 > span {
+  line-height: 2em;
+  margin-left: 18px;
+  width: 96%;
+  float: right;
   vertical-align: middle;
 }
 
 input[type='checkbox'] {
   height: 21px;
   width: 21px;
-  margin-right: 18px;
+  margin: 0 18px 0 0;
+  float: left;
 }
 
 strong {
@@ -160,15 +165,16 @@ i {
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
-  display: inline-block;
   text-align: center;
   border-radius: 6px;
   margin: 0 15px 0 0;
+  float: left;
 }
 
 .steps > .value {
-  display: inline;
-  line-height: 150%;
+  line-height: 2em;
+  float: right;
+  width: 91%;
 }
 
 .source {
@@ -183,6 +189,12 @@ footer {
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+}
+
+.float-fix {
+  visibility: hidden;
+  width: 100%;
+  margin: 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -258,12 +270,27 @@ footer {
     line-height: 25px;
   }
 
+  .list-part-1 > p {
+    height: 2em;
+  }
+
+  .list-part-1 > p > span {
+    float: right;
+    width: 91%;
+  }
+
   .steps {
     margin: 0 0 25px 0px;
     font-size: 16px;
+    height: 30px;
+  }
+
+  .steps > .value {
+    width: 88%;
   }
 
   .steps-count {
     font-size: 24px;
   }
+  
 }
