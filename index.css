@@ -137,6 +137,11 @@ mark {
   border-bottom: 3px solid lightblue;
 }
 
+.projects {
+  flex-wrap: wrap;
+  display: flex;
+}
+
 /* Portrait */
 @media screen and (min-width: 360px) and (orientation: portrait) {
   .container {
