@@ -99,6 +99,7 @@ main .sub-heading {
 
 .interior-image {
   float: right;
+  position: relative;
 }
 .interior-image > img {
   height: 586px;
@@ -109,11 +110,13 @@ main .sub-heading {
   padding: 10px;
   width: 380px;
   line-height: 1.5em;
-  height: 190px;
+  /* height: 190px; */
   /* border: 1px solid #fff; */
   background-color: #181719;
   position: absolute;
-  transform: translate(80%, -50%);
+  bottom: 0;
+  right: 42px;
+  margin: 0 0 -100px 0;
 }
 
 .decorator-card > img {
@@ -200,8 +203,8 @@ footer {
   }
 
   .decorator-card {
-    width: 300px;
-    transform: translate(30%, -50%);
+    margin: 0 0 -40px 0;
+    right: 30px;
   }
   .decorator-card > .name {
     font-size: 12px;
