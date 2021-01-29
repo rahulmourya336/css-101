@@ -20,13 +20,13 @@ body {
   /* border: 1px solid; */
   transform: translate(-50%, -50%);
   height: 500px;
-  width: 720px;
+  /* width: 720px; */
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
 .description-box {
-  height: 45%;
+  height: max-content;
   background-color: #fff;
   padding: 40px;
   border-radius: 15px 15px 0 0;
@@ -57,9 +57,9 @@ body {
 
 .pricing {
   padding: 16px;
-  width: 360px;
+  width: 50%;
   background-color: hsl(179, 62%, 43%);
-  height: 55%;
+  height: 56%;
   border-radius: 0 0 0 16px;
   margin: 0px;
   padding: 40px;
@@ -108,10 +108,10 @@ body {
 
 .reason {
   padding: 40px;
-  width: 360px;
+  width: 50%;
   float: right;
   background-color: hsl(179deg 62% 43% / 75%);
-  height: 55%;
+  height: 56%;
   margin: 0px;
   border-radius: 0 0 16px 0;
   float: left;
@@ -137,27 +137,44 @@ body {
 
 /* Utility Classes */
 
-@media screen and (max-width: 766px) and (orientation: portrait) {
+@media screen and (max-width: 766px) {
   .price-card {
     top: 50%;
     height: auto;
   }
 
+  .price-card {
+    position: initial;
+    transform: none;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    width: 95%;
+    margin: 0 auto;
+}
+
   .description-box {
-    width: 80%;
+    width: 100%;
     margin-left: 0px;
+    padding: 20px;
   }
 
   .pricing,
   .reason {
-    width: 80%;
+    width: 100%;
     border-radius: 0;
     height: auto;
-    /* width: auto; */
+  }
+
+  .reason {
+    border-radius: 0 0 16px 16px;
   }
 
   .attribution {
-     display: inline-block;
-     margin: 20px;
+    display: inline-block;
+    margin: 20px;
+  }
+
+  body {
+    padding: 23px 0 594px 0;
   }
 }
