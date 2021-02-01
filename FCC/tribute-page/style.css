@@ -1,0 +1,76 @@
+* {
+  padding: 0 px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Abril Fatface', cursive;
+}
+
+.main {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.tribute-info {
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-grow: 1;
+  padding: 15px;
+  margin: 0 0 20px 0;
+}
+
+img {
+  border-radius: 20px;
+  box-shadow: 0px 2px 24px rgb(0 0 0 / 10%);
+}
+
+
+.tribute-info > p {
+  margin: 0 0 0 30px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.8em;
+  text-align: justify;
+  width: 340px;
+}
+
+:link {
+  text-decoration: none;
+}
+
+.tribute-info > p:first-of-type::first-letter{
+  font-size: 32px;
+}
+
+
+@media only screen and (max-width: 844px) {
+  .main {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .tribute-info > .img-div{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .tribute-info {
+    display: flex;
+    justify-content: column;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .tribute-info > p{
+    margin: 18px 0 0 0;
+    width: 100%;
+  }
+
+  .tribute-info > .img-div > img {
+    height: 160px;
+  }
+}
