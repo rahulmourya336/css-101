@@ -8,6 +8,8 @@
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 400;
+  background-color: #393b3f;
+  color: #fff;
 }
 
 h1 {
@@ -17,6 +19,10 @@ h1 {
 ul > li {
   padding: 16px 0 16px 0;
   list-style-position: inside;
+}
+
+hr {
+  border-color: #474747;
 }
 
 h1 > img {
@@ -33,20 +39,24 @@ h1 > img {
 /* CSS IDs */
 
 .card {
-  margin: 20px 25px 0 0;
+  margin: 20px 0 0 0;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
   width: 350px;
   display: inline-block;
-  height: 445px;
+  height: 450px;
   min-height: 250px;
   border: 5px solid;
-  border-image-source: linear-gradient(
+  /* border-image-source: linear-gradient(
     45deg,
     rgb(143, 0, 88),
     rgb(66, 140, 250)
-  );
+  ); */
+
   border-image-slice: 1;
   transition: all;
+  background-color: #2a2b2f;
+  border-radius: 8px;
+  border-color: #2a2b2f;
 }
 
 .card:hover {
@@ -62,19 +72,20 @@ h1 > img {
   height: 230px;
   text-align: center;
   padding: 86px;
-  color: lightgray;
-  border-bottom: 1px solid lightgray;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 400;
 }
 
 .card-body {
-  padding: 10px 20px 20px 20px;
-  border-top: 0.5px solid lightgray;
+  padding: 20px 20px 20px 20px;
+  border-top: 0.5px solid #474747;
 }
 
 .card-body img {
   border: 2px solid lightblue;
   border-radius: 50px;
   height: 40px;
+  background-color: #fff;
 }
 
 .img-fix {
@@ -143,18 +154,20 @@ h1 > img {
 }
 
 .text-muted {
-  color: #676767;
+  color: #a2a2a2;
   font-weight: 400;
 }
 
 mark {
   background-color: unset;
   border-bottom: 3px solid #d9d9d9;
+  color: #fff;
 }
 
 .projects {
   flex-wrap: wrap;
   display: flex;
+  justify-content: space-between;
 }
 
 /* Portrait */
