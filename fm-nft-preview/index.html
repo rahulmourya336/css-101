@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css " />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="img">
+          <img
+            src="./images/image-equilibrium.jpg"
+            alt="Equilibrium preview"
+            height="302"
+            class="img"
+          />
+          <div class="overlay">
+            <img src="/images/icon-view.svg" alt="view icon"  />
+          </div>
+        </div>
+
+        <div class="content">
+          <p class="heading">Equilibrium #3429</p>
+          <p class="sub-heading">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <div class="price-time">
+            <p class="eth-price">
+              <img
+                src="./images/icon-ethereum.svg"
+                alt="ETH Icon"
+                class="icon-img"
+              />
+              0.041 ETH
+            </p>
+            <p class="days">
+              <img src="./images/icon-clock.svg"/ class="icon-img"> 3 days left
+            </p>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer">
+          <div class="creator-avatar">
+            <img
+              src="./images/image-avatar.png"
+              alt="creator-avatar"
+              class="avatar"
+              height="33"
+            />
+            <p class="creator-text">
+              Creation of <span class="creator-name">Jules Wyvern</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://twitter.com/rahucrux">Rahul Mourya</a>.
+    </footer>
+  </body>
+</html>

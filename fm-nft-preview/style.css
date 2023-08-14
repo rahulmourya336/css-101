@@ -1,0 +1,145 @@
+:root {
+  --color-dark-blue-bg: hsl(217, 54%, 11%);
+  --color-dark-blue-card: hsl(216, 50%, 16%);
+  --color-dark-blue-line: hsl(215, 32%, 27%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+  background-color: var(--color-dark-blue-bg);
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 25ch;
+  margin: auto;
+}
+
+.container {
+  border-radius: 15px;
+  padding: 1.5em;
+  background-color: var(--color-dark-blue-card);
+}
+
+.img {
+  border-radius: 15px;
+  position: relative;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+.sub-heading {
+  margin-top: 16px;
+  color: #8bacd9;
+  font-size: 18px;
+  font-weight: 300;
+  font-variant: normal;
+}
+
+.price-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  margin-top: 24px;
+}
+
+.eth-price {
+  color: cyan;
+  margin-right: 6px;
+}
+
+.days {
+  color: #8bacd9;
+}
+
+.icon-img {
+  vertical-align: bottom;
+  margin-right: 6px;
+}
+
+.separator {
+  margin-top: 24px;
+  border: 0.1px solid var(--color-dark-blue-line);
+  border-radius: 55px;
+}
+
+.avatar {
+  border: 2px solid var(--color-white);
+  border-radius: 55%;
+  vertical-align: middle;
+}
+
+.footer {
+  margin-top: 16px;
+  font-weight: 300;
+}
+
+.creator-text {
+  color: #8bacd9;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+.creator-name {
+  color: var(--color-white);
+}
+
+.heading:hover,
+.creator-name:hover {
+  color: cyan;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  height: 99%;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 248, 0.5);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.overlay:hover,
+img:hover {
+  opacity: 1;
+}
+
+/* When the browser is at least 600px and above */
+@media screen and (max-width: 375) {
+  .wrapper {
+    /* Apply some styles */
+    width: 15ch;
+  }
+
+  .sub-heading {
+    margin-top: 12px;
+  }
+
+  .price-time {
+    margin-top: 16px;
+  }
+}
