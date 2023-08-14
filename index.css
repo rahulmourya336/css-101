@@ -165,9 +165,11 @@ mark {
 }
 
 .projects {
-  flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  flex: 0 0 100%;
+  gap: 3em;
 }
 
 /* Portrait */
