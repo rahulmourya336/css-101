@@ -1,18 +1,20 @@
-/* Element styles */
-
-* {
+*,
+*::before,
+*::after {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Kumbh Sans', sans-serif;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
   background-image: url(images/bg-pattern-top.svg),
     url(images/bg-pattern-bottom.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: top -455px left -366px, 120% -55%;
   background-color: hsl(185, 75%, 39%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -150px left -50px, bottom -200px right -150px;
+  background-size: 650px, 650px;
+  background-attachment: fixed, fixed;
 }
 
 /* Classes */
@@ -26,6 +28,7 @@ body {
 .attribution a {
   color: hsl(228, 100%, 28%);
 }
+
 .card {
   position: fixed; /* or absolute */
   top: 50%;
@@ -34,36 +37,39 @@ body {
   height: 400px;
   width: 320px;
   border-radius: 20px;
-  box-shadow: 0px 10px 20px 6px hsl(229, 23%, 23%, 0.1);
+
+  filter: drop-shadow(0px 50px 100px hsl(197, 84%, 20%, 50.48%));
 }
 
 .card > .cover {
   background: url(./images/bg-pattern-card.svg) repeat-x;
-  height: 40%;
+  height: 140px;
+  width: 100%;
   border-radius: 20px 20px 0px 0px;
   background-size: cover;
 }
 
 .card > .details {
-  height: 60%;
   background-color: #fff;
   border-radius: 0px 0px 20px 20px;
+}
+
+.profile-image {
+  height: 160px;
 }
 
 .profile-image > img {
   border-radius: 50px;
   border: 5px #fff solid;
   position: relative;
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .profile-image > p {
   position: relative;
-  top: -20px;
+  top: -60px;
   text-align: center;
-  margin-bottom: 14px;
 }
 
 .details > .user-details {
@@ -91,9 +97,26 @@ body {
 
 .text-bold {
   font-weight: bold;
+  font-size: 18px;
 }
 
 .text-muted {
   font-weight: normal;
   color: hsl(0, 0%, 59%);
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+/* When the browser is at least 600px and above */
+@media screen and (max-width: 375px) {
+  body {
+    background-position: top -140px left -140px, bottom -140px right -140px;
+    background-size: 450px, 450px;
+  }
 }
