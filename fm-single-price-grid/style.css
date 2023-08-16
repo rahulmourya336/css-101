@@ -17,10 +17,9 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  /* border: 1px solid; */
+  height: 475px;
+  width: 635px;
   transform: translate(-50%, -50%);
-  height: 500px;
-  /* width: 720px; */
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
@@ -49,8 +48,8 @@ body {
 .description-box > .description {
   width: 100%;
   font-size: 16px;
-  word-spacing: 7px;
-  line-height: 1.8;
+  line-height: 1.8em;
+  font-weight: 300;
   color: hsla(218, 22%, 67%, 0.6);
   font-weight: 700;
 }
@@ -119,6 +118,7 @@ body {
 
 .reason > .list {
   list-style-type: none;
+  font-size: 14px;
   margin: 15px 0 0 0;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.6);
@@ -135,9 +135,13 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
+.text-white {
+  color: #fff;
+}
+
 /* Utility Classes */
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 550px) {
   .price-card {
     top: 50%;
     height: auto;
