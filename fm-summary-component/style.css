@@ -1,0 +1,242 @@
+:root {
+  /* Primary */
+  --color-light-red: hsl(0, 100%, 67%);
+  --color-orangey-yellow: hsl(39, 100%, 56%);
+  --color-green-teal: hsl(166, 100%, 37%);
+  --color-cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Secondary */
+  --color-light-slate-blue: hsl(252, 100%, 67%);
+  --color-light-royal-blue: hsl(241, 81%, 54%);
+  --color-violet-blue: hsla(256, 72%, 46%, 1);
+  --color-persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --color-white: hsl(0, 0%, 100%);
+  --color-pale-blue: hsl(221, 100%, 96%);
+  --color-light-lavender: hsl(241, 100%, 89%);
+  --color-dark-gray-blue: hsl(224, 30%, 27%);
+  --color-dark-navy: #303b59;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+body {
+  font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+  background-color: var(--color-pale-blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 736px;
+  height: 512px;
+  margin: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 32px;
+  background-color: var(--color-white);
+  transition: 0.1s ease;
+  filter: drop-shadow(0px 30px 50px #3D6CEC26);
+}
+
+.container {
+  height: 100%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 100% 100%;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: inherit;
+  width: 100%;
+  border-radius: 32px;
+  background: linear-gradient(
+    180deg,
+    var(--color-light-slate-blue) 0%,
+    var(--color-light-royal-blue) 95%
+  );
+  padding: 45px;
+  font-size: 18px;
+  color: var(--color-light-lavender);
+}
+
+.detail > .score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 35px;
+  height: 200px;
+  width: 200px;
+  background: rgb(37, 33, 201);
+  background: linear-gradient(
+    180deg,
+    rgba(37, 33, 201, 1) 0%,
+    rgba(77, 33, 201, 0.04) 100%
+  );
+
+  border-radius: 50%;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status > p:nth-child(1) {
+  margin: 28px 0 14px 0;
+}
+
+.sub-text {
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 18px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 45px;
+  color: var(--color-dark-navy);
+  font-weight: bold;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+.points {
+  margin-top: 28px;
+}
+
+.point-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  height: 52px;
+}
+
+.point-list:nth-child(1) {
+  background-color: hsla(0, 100%, 67%, 0.05);
+  color: var(--color-light-red);
+}
+
+.point-list:nth-child(2) {
+  background-color: hsla(39, 100%, 56%, 0.05);
+  color: var(--color-orangey-yellow);
+}
+
+.point-list:nth-child(3) {
+  background-color: hsla(166, 100%, 37%, 0.05);
+  color: var(--color-green-teal);
+}
+
+.point-list:nth-child(4) {
+  background-color: hsla(234, 85%, 45%, 0.05);
+  color: var(--color-cobalt-blue);
+}
+
+.point-icon {
+  vertical-align: middle;
+  margin: 0 12px;
+}
+
+.point-muted {
+  color: var(--color-dark-navy);
+  opacity: 50%;
+}
+
+.text {
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.action-button {
+  font-family: inherit;
+  border: none;
+  background-color: var(--color-dark-navy);
+  color: white;
+  width: 100%;
+  padding: 18px;
+  border-radius: 128px;
+  margin-top: 41px;
+  font-size: 18px;
+}
+
+.action-button:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(37, 33, 201, 1) 0%,
+    rgba(77, 33, 201, 1) 100%
+  );
+  opacity: 0.9;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.l {
+  font-size: 32px;
+  color: var(--color-white);
+}
+
+.lg {
+  font-size: 72px;
+}
+
+.text-muted {
+  font-size: 18px;
+  color: var(--color-light-lavender);
+  opacity: 0.5;
+  font-weight: 700;
+}
+
+/* When the browser is at least 600px and above */
+@media screen and (max-width: 575px) {
+  .wrapper {
+    width: 375px;
+    height: auto;
+    margin: 0;
+    border-radius: 0px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    transition: 0.1s ease;
+    width: 100%;
+  }
+
+  .detail {
+    border-bottom-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  footer {
+    display: none;
+  }
+}

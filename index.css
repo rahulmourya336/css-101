@@ -118,6 +118,7 @@ h1 > img {
 }
 
 .card-footer button.btn {
+  font-family: inherit;
   border: none;
   background: #fff;
   border-radius: 55px;

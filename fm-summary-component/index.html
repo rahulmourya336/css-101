@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 48px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="container">
+        <div class="detail">
+          <div>Your Result</div>
+          <div class="score">
+            <div class="text lg">76</div>
+            <div class="text-muted">of 100</div>
+          </div>
+          <div class="status">
+            <p class="text l">Great</p>
+            <p class="sub-text">
+              Your performance exceed 65% of the people conducting the test
+              here!
+            </p>
+          </div>
+        </div>
+        <div class="summary">
+          <div class="heading">Summary</div>
+
+          <div class="points">
+            <div class="point-list">
+              <div>
+                <img
+                  src="./assets/images/icon-reaction.svg"
+                  alt="reaction icon"
+                  class="point-icon"
+                /><span class="point-title">Reaction</span>
+              </div>
+
+              <div>
+                <span class="point-active">80</span>
+                <span class="point-muted">/ 100</span>
+              </div>
+            </div>
+
+            <div class="point-list">
+              <div>
+                <img
+                  src="./assets/images/icon-memory.svg"
+                  alt="reaction icon"
+                  class="point-icon"
+                />
+                <span class="point-title">Memory</span>
+              </div>
+
+              <div>
+                <span class="point-active">92</span>
+                <span class="point-muted">/ 100</span>
+              </div>
+            </div>
+
+            <div class="point-list">
+              <div>
+                <img
+                  src="./assets/images/icon-verbal.svg"
+                  alt="reaction icon"
+                  class="point-icon"
+                /><span class="point-title">Verbal</span>
+              </div>
+
+              <div>
+                <span class="point-active">61</span>
+                <span class="point-muted">/ 100</span>
+              </div>
+            </div>
+
+            <div class="point-list">
+              <div>
+                <img
+                  src="./assets/images/icon-visual.svg"
+                  alt="reaction icon"
+                  class="point-icon"
+                /><span class="point-title">Visual</span>
+              </div>
+
+              <div>
+                <span class="point-active">73</span>
+                <span class="point-muted">/ 100</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button type="button" class="action-button">Continue</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
