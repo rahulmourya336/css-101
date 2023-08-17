@@ -60,19 +60,20 @@ body {
 
 .heading {
   text-transform: uppercase;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.4em;
   font-size: 12px;
 }
 
 .title {
   margin-top: 20px;
   font-size: 32px;
+  line-height: 1em;
 }
 
 .description {
   margin-top: 24px;
   font-size: 13px;
-  line-height: 1.6em;
+  line-height: 1.7em;
 }
 
 .price {
