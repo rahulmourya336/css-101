@@ -28,6 +28,7 @@ body {
   width: 920px;
   margin: auto;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .container {
