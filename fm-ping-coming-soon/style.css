@@ -1,0 +1,196 @@
+:root {
+  /* Primary */
+  --color-blue: hsl(223, 87%, 63%);
+  --color-blue-shadow: hsla(223, 87%, 63%, 23.04%);
+
+  /* Secondary */
+  --color-pale-blue: hsl(223, 100%, 88%);
+  --color-light-red: hsl(354, 100%, 66%);
+
+  /* Neutral */
+  --color-gray: hsl(0, 0%, 59%);
+  --color-very-dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 39px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 30px;
+  color: var(--color-very-dark-blue);
+}
+
+.accent-color {
+  color: var(--color-blue);
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 48px;
+  color: var(--color-gray);
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--color-very-dark-blue);
+}
+
+p {
+  margin-top: 16px;
+  font-size: 20px;
+}
+
+.action {
+  margin-top: 40px;
+}
+
+.input {
+  width: 421px;
+  border: 1px solid var(--color-pale-blue);
+  filter: drop-shadow(0px 0px 7px hsla(0, 0%, 0%, 0.1%));
+  padding: 20px;
+  border-radius: 55px;
+  font-family: inherit;
+  color: var(--color-very-dark-blue);
+}
+
+.input:active,
+.input:focus {
+  border: 1px solid var(--color-blue);
+  outline: none;
+}
+
+.input-error {
+  border: 1px solid var(--color-light-red);
+}
+
+.btn {
+  padding: 20px;
+  margin-left: 16px;
+  border-radius: 55px;
+  border: none;
+  width: 200px;
+  font-family: inherit;
+  background-color: var(--color-blue);
+  font-weight: 600;
+  color: #fff;
+  filter: drop-shadow(0px 5px 10px var(--color-blue-shadow));
+  cursor: pointer;
+}
+
+.illustration {
+  margin-top: 94px;
+}
+
+.error-message {
+  color: var(--color-light-red);
+  font-size: 12px;
+  font-style: italic;
+  display: block;
+  margin: 6px 0 0 26px;
+  position: absolute;
+}
+
+.hide {
+  display: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 72px;
+  gap: 25px 0px;
+}
+
+footer > .copyright {
+  color: var(--color-gray);
+  font-size: 12px;
+}
+
+.icon {
+  color: var(--color-blue);
+  fill: var(--color-gray);
+  border: 1px solid var(--color-gray);
+  border-radius: 55px;
+  padding: 5px;
+  margin-right: 12px;
+}
+
+.icon:hover {
+  border: 1px solid var(--color-blue);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* When the browser is at least 600px and above */
+@media screen and (max-width: 640px) {
+  .heading {
+    font-size: 20px;
+  }
+
+  h2 {
+    margin-top: 32px;
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .action {
+    margin-top: 32px;
+  }
+
+  .input {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 12px;
+  }
+
+  .error-message + button {
+    margin-top: 40px;
+  }
+
+  .error-message.hide + button {
+    margin-top: 10px;
+  }
+
+  .illustration {
+    margin-top: 72px;
+    width: 283px;
+  }
+
+  footer {
+    margin-top: 120px;
+    gap: 27px 0px;
+  }
+
+  footer > .copyright {
+    font-size: 10px;
+  }
+}
