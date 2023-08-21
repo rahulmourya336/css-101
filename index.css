@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 400;
   background-color: #393b3f;
   color: #fff;
@@ -60,6 +60,11 @@ h1 > img {
 .project-preview {
   width: 100%;
   min-height: 230px;
+}
+
+.project-preview:hover, .no-preview-available:hover {
+  transform: scale(0.95);
+  transition: 0.2s ease;
 }
 
 .no-preview-available {
