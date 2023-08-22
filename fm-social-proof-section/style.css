@@ -1,0 +1,247 @@
+:root {
+  /* Primary */
+  --color-very-dark-magenta: hsl(300, 43%, 22%);
+  --color-soft-pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+  --color-dark-grayish-magenta: hsl(303, 10%, 53%);
+  --color-light-grayish-magenta: hsl(300, 24%, 96%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  background-image: url("images/bg-pattern-top-desktop.svg"),
+    url("./images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-attachment: fixed;
+  background-color: var(--color-white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main {
+  margin: 130px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 125px;
+  width: 1110px;
+}
+
+.heading {
+  width: 445px;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -2px;
+  color: var(--color-very-dark-magenta);
+}
+
+.description {
+  line-height: 25px;
+  font-size: 19px;
+  letter-spacing: -0.63px;
+  margin-top: 17px;
+  color: var(--color-dark-grayish-magenta);
+}
+
+.rating {
+  margin: 20px 0;
+  font-weight: 900;
+}
+
+.rating > div {
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  justify-content: start;
+  padding: 0 20px;
+  align-items: center;
+  width: 445px;
+  height: 56px;
+  background-color: var(--color-light-grayish-magenta);
+  margin: 16px 0;
+  border-radius: 8px;
+  gap: 32px;
+}
+
+.rating > div > div > img {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.rating > div:nth-child(2) {
+  margin-left: 45px;
+}
+
+.rating > div:nth-child(3) {
+  margin-left: 95px;
+}
+
+.title {
+  font-size: 17px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 70px 130px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 350px;
+  height: 234px;
+  border-radius: 8px;
+  background-color: var(--color-very-dark-magenta);
+
+  padding: 32px;
+}
+
+.title > img {
+  height: 40px;
+  width: 40px;
+}
+
+.title {
+  display: flex;
+}
+
+.profile-details {
+  margin-left: 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px 0;
+}
+
+.profile-icon {
+  border-radius: 55px;
+}
+
+.profile-name {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.profile-verification {
+  font-weight: 400;
+  color: var(--color-soft-pink);
+}
+
+.comment {
+  margin-top: 31px;
+  color: var(--color-white);
+  line-height: 22px;
+  letter-spacing: -0.3px;
+  font-weight: 400;
+}
+
+.card:nth-child(2) {
+  margin-top: 30px;
+}
+
+.card:nth-child(3) {
+  margin-top: 60px;
+}
+
+/* When the browser is at least 600px and above */
+@media screen and (max-width: 475px) {
+  body {
+    background-image: url("images/bg-pattern-top-mobile.svg"),
+      url("./images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top left, right top;
+  }
+
+  main {
+    margin: 0px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    width: 327px;
+  }
+
+  .heading {
+    margin: 80px 0 39px 0;
+    width: 327px;
+    text-align: center;
+  }
+
+  .description {
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 32px;
+    letter-spacing: -1.453px;
+  }
+
+  .stars {
+    padding: 0 0 15px 0;
+  }
+
+  .rating {
+    margin: 0;
+    text-align: center;
+  }
+
+  .rating > div {
+    width: 327px;
+    height: 78px;
+    display: grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 16px 0;
+    gap: 0;
+    border-radius: 8px;
+  }
+
+  .rating > div:nth-child(2) {
+    margin-left: 0;
+  }
+
+  .rating > div:nth-child(3) {
+    margin-left: 0px;
+  }
+
+  .testimonials {
+    margin: 49px 39px;
+    width: 327px;
+  }
+
+  .card {
+    width: inherit;
+    height: 248px;
+  }
+
+  .card:nth-child(2) {
+    margin-top: 0px;
+  }
+
+  .card:nth-child(3) {
+    margin-top: 0px;
+  }
+}
