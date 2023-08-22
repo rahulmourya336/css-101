@@ -16,7 +16,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--color-violet);
-  height: 100vh;
 }
 
 .logo {
@@ -24,6 +23,12 @@ body {
   background-repeat: no-repeat;
   padding: 30px;
   margin: 40px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
 }
 
 .content {
@@ -104,7 +109,7 @@ button:hover {
   border: 1px solid var(--color-soft-magenta);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 475px) {
   body {
     background-image: url("./images/bg-mobile.svg");
     background-position: top;
@@ -116,6 +121,10 @@ button:hover {
     background-size: 10em;
     height: 19px;
     margin: 20px;
+  }
+
+  .wrapper {
+    display: unset;
   }
 
   .illustration {
