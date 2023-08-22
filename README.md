@@ -14,4 +14,4 @@ ReactJS, CSS (Styled Components)
 
 ### Hosted on
 ---
-[Netlify](https://www.netlify.com/about/)
+[Vercel](https://www.vercel.com/about/)
