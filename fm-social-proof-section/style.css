@@ -38,6 +38,7 @@ main {
   flex-wrap: wrap;
   column-gap: 125px;
   width: 1110px;
+  align-items: end;
 }
 
 .heading {
