@@ -1,0 +1,157 @@
+:root {
+  --color-violet: hsl(257, 40%, 49%);
+  --color-soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("./images/bg-desktop.svg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-violet);
+  height: 100vh;
+}
+
+.logo {
+  background-image: url("./images/logo.svg");
+  background-repeat: no-repeat;
+  padding: 30px;
+  margin: 40px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 18px;
+  gap: 59px;
+}
+
+.illustration {
+  background-image: url("./images/illustration-mockups.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 696px;
+  height: 493px;
+}
+
+.description {
+  margin: 20px 0 0 0;
+  width: 487px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 40px;
+  line-height: 61px;
+}
+
+.sub-text {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 24px;
+  line-height: 27px;
+  font-size: 18px;
+  width: 100%;
+  opacity: 0.8;
+}
+
+button {
+  margin-top: 24px;
+  font-family: inherit;
+  color: var(--color-violet);
+  background-color: white;
+  border: none;
+  width: 200px;
+  height: 56px;
+  font-size: 18px;
+  border-radius: 28px;
+  filter: drop-shadow(2px 4px 9px hsla(0, 0%, 0%, 25.89%));
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-soft-magenta);
+  color: white;
+}
+
+.icons {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.icon {
+  border: 1px solid white;
+  border-radius: 55px;
+  padding: 6px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.icon:hover {
+  border: 1px solid var(--color-soft-magenta);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url("./images/bg-mobile.svg");
+    background-position: top;
+    background-color: var(--color-violet);
+    background-size: auto;
+  }
+
+  .logo {
+    background-size: 10em;
+    height: 19px;
+    margin: 20px;
+  }
+
+  .illustration {
+    background-size: cover;
+    width: 296px;
+    height: 209px;
+  }
+
+  .description {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .icons {
+    margin-top: 64px;
+  }
+
+  .icon {
+    border-radius: 55px;
+    height: 28px;
+    width: 28px;
+  }
+
+  .heading {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  button {
+    width: 200px;
+    height: 40px;
+  }
+}
