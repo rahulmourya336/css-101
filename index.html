@@ -35,6 +35,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Result Summary",
+          github: 'https://github.com/rahulmourya336/css-101/tree/master/fm-summary-component',
           tags: ["Flex", "Color", "Shadows", "gradient"],
         },
         footer: {
@@ -51,6 +52,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Product Preview Card",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-product-preview-card",
           tags: ["Flex", "Color", "Responsive"],
         },
         footer: {
@@ -67,6 +69,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Ping - Coming Soon",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-ping-coming-soon",
           tags: ["Flex", "Responsive"],
         },
         footer: {
@@ -83,6 +86,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Stats Card",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-stats-preview-card",
           tags: ["Flex", "Responsive"],
         },
         footer: {
@@ -99,6 +103,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Column Cars Preview",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-3-column-preview",
           tags: ["Grid", "Responsive"],
         },
         footer: {
@@ -115,6 +120,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Huddle Landing Page",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-huddle-landing-page",
           tags: ["Flex", "Color", "Responsive"],
         },
         footer: {
@@ -131,6 +137,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Four Card Section",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-four-card-feature",
           tags: ["Flex", "Grid", "Color", "Shadows"],
         },
         footer: {
@@ -147,6 +154,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Order Summary",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-order-summary",
           tags: ["Flex", "Color", "Shadows"],
         },
         footer: {
@@ -163,6 +171,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "NFT Card",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-nft-preview",
           tags: ["Flex", "Color"],
         },
         footer: {
@@ -179,6 +188,7 @@
         body: {
           favicon: "./fm-qr-code/images/favicon-32x32.png",
           heading: "QR Code",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-qr-code",
           tags: ["Flex", "Typography"],
         },
         footer: {
@@ -195,6 +205,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Profile Card",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-profile-card",
           tags: ["Layout", "Box Model", "Positioning"],
         },
         footer: {
@@ -211,6 +222,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Single Price Component",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/fm-single-price-grid",
           tags: ["Floats", "Responsive Units"],
         },
         footer: {
@@ -243,6 +255,7 @@
         body: {
           favicon: "./dc-404-not-found-master/devchallenges.png",
           heading: "Classic Cheesecake Recipe",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/dc-404-not-found-master",
           tags: ["CSS Variables", "Floats", "Responsive Image"],
         },
         footer: {
@@ -259,6 +272,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "Neuomorphic UI - Music interface",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/v-neuomorphic-design",
           tags: ["CSS Shadow"],
         },
         footer: {
@@ -275,6 +289,7 @@
         body: {
           favicon: "./FCC/assets/fcc_secondary_small.png",
           heading: "Tribute Page",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/FCC/tribute-page",
           tags: ["Flexbox"],
         },
         footer: {
@@ -291,6 +306,7 @@
         body: {
           favicon: "./favicon-32x32.png",
           heading: "My Gallery",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/dc-my-gallery",
           tags: ["Flexbox"],
         },
         footer: {
@@ -306,7 +322,8 @@
         },
         body: {
           favicon: "./dc-404-not-found-master/devchallenges.png",
-          heading: "Interior Consultant Information Page",
+          heading: "Interior Consultant Page",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/dc-interior-consultant",
           tags: ["Responsive Navigation"],
         },
         footer: {
@@ -323,6 +340,7 @@
         body: {
           favicon: "./dc-404-not-found-master/devchallenges.png",
           heading: "My Team",
+          github: "https://github.com/rahulmourya336/css-101/tree/master/dc-my-team-page",
           tags: ["Responsive Navigation"],
         },
         footer: {
@@ -363,12 +381,15 @@
       const projectHeading = document.createElement("p");
       projectHeading.setAttribute("class", "heading");
       projectHeading.innerText = cv.body.heading;
+      if (cv.body.github) {
+        projectHeading.innerHTML += ` • <a href='${cv.body.github}' class='link' target="_blank"> <img src='./assets/github-icon.svg' alt="github icon" class="icon" />Github </a>`;
+      }
 
       const projectDescription = document.createElement("p");
       projectDescription.setAttribute("class", "description");
-      projectDescription.innerHTML = `Takeaways: <mark>${cv.body.tags.join(
-        ", "
-      )}</mark>`;
+      projectDescription.innerHTML = cv.body.tags.map(
+        (tag) => `<span class='tag'> #${tag}</span>`
+      );
 
       cardBodyEle.appendChild(projectFaviconEle);
       cardBodyEle.appendChild(projectHeading);
