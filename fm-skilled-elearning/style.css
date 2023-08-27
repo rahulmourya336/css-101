@@ -36,6 +36,11 @@ body {
   background: var(--color-gradient-white-bg);
 }
 
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
 main {
   margin: 25px 45px;
 }
@@ -212,6 +217,10 @@ footer {
     margin: inherit 25px;
   }
 
+  .wrapper {
+    width: 100%;
+  }
+
   .hero {
     width: 457px;
     height: 359px;
@@ -240,6 +249,10 @@ footer {
 @media screen and (max-width: 375px) {
   main {
     margin: 10px 8px;
+  }
+
+  .wrapper {
+    width: 100%;
   }
 
   h1.heading {
