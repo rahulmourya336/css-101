@@ -29,6 +29,24 @@
     const projectList = [
       {
         meta: {
+          thumbnail: "./fm-meet-landing-page/preview.jpg",
+          altText: "Meet landing preview",
+        },
+        body: {
+          favicon: "./favicon-32x32.png",
+          heading: "Meet Landing Page",
+          github:
+            "https://github.com/rahulmourya336/css-101/tree/master/fm-meet-landing-page",
+          tags: ["TailwindCSS", "Flex", "Color", "gradient"],
+        },
+        footer: {
+          buildTime: "4:00 Hours",
+          viewLink: "./fm-meet-landing-page/",
+        },
+      },
+
+      {
+        meta: {
           thumbnail: "./fm-summary-component/design/desktop-design.jpg",
           altText: "Result Summary Preview",
         },
@@ -422,11 +440,18 @@
       },
     ];
 
+    const previewProject = (cv) => {
+      console.log("PROJECT TAP", cv);
+    };
+
     const ProjectCards = projectList.reduce((acc, cv) => {
       const cardEle = document.createElement("div");
       cardEle.setAttribute("class", "card");
 
       let preview = "";
+
+      const hyperLink = document.createElement("a");
+      hyperLink.setAttribute("href", cv.footer.viewLink);
 
       if (!cv.meta.thumbnail) {
         const noPreviewEle = document.createElement("h2");
@@ -440,9 +465,10 @@
         previewEle.setAttribute("class", "project-preview");
         preview = previewEle;
       }
-
+      hyperLink.appendChild(preview);
+      
       // Card Meta
-      cardEle.appendChild(preview);
+      cardEle.appendChild(hyperLink);
 
       const cardBodyEle = document.createElement("div");
       cardBodyEle.setAttribute("class", "card-body");

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Meet landing page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="m-5">
+      <header class="flex justify-center">
+        <img src="./assets/logo.svg" alt="Meet logo" class="mt-4" />
+      </header>
+
+      <!-- Hero Section -->
+      <div
+        class="mt-10 sm:mt-32 flex gap-x-20 flex-row l:flex-row md:flex-row sm:flex-col xs:flex-col"
+      >
+        <div class="inline-block lg:inline-block xs:hidden sm:hidden md:hidden">
+          <img src="./assets/desktop/image-hero-left.png" />
+        </div>
+        <div
+          class="hidden lg:hidden xs:inline-block sm:inline-block md:inline-block mb-16"
+        >
+          <img src="./assets/tablet/image-hero.png" />
+        </div>
+        <div
+          class="text-center flex flex-col gap-9 justify-center items-center"
+        >
+          <h1 class="text-6xl text-black font-bold">Group Chat for Everyone</h1>
+          <div class="text-lg text-slate">
+            Meet makes it easy to connect with others face-to-face virtually and
+            collaborate across any device.
+          </div>
+          <div class="flex gap-4 flex-wrap justify-center">
+            <button
+              class="bg-darkcyan text-white border-0 w-48 h-14 rounded-full text-lg font-bold hover:opacity-60"
+            >
+              Download<span class="text-lightcyan ml-2">v1.3</span>
+            </button>
+            <button
+              class="bg-darkcyan text-white border-0 w-40 h-14 rounded-full text-lg font-bold bg-purple hover:opacity-60"
+            >
+              What is it?
+            </button>
+          </div>
+        </div>
+        <div class="inline-block lg:inline-block xs:hidden sm:hidden md:hidden">
+          <img src="./assets/desktop/image-hero-right.png" />
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="flex justify-center items-center mt-28 flex-col">
+        <div>
+          <span
+            class="relative border-slate border rounded-full text-xl text-slate p-4 text-center inline-block border-2 font-bold border-opacity-10 w-16"
+            ><span
+              class="h-16 border absolute bottom-16 left-7 border-slate border-opacity-10"
+            ></span
+            >01</span
+          >
+        </div>
+
+        <!-- image list -->
+        <div
+          class="flex gap-7 my-14 flex-wrap sm:gap-3 xs:gap-3 justify-center"
+        >
+          <div class="w-64 sm:w-40 xs:w-40 md:w-64">
+            <img
+              src="./assets/desktop/image-woman-in-videocall.jpg"
+              alt="woman in videocall"
+              class="rounded-lg"
+            />
+          </div>
+          <div class="w-64 sm:w-40 xs:w-40 md:w-64">
+            <img
+              src="./assets/desktop/image-women-videochatting.jpg"
+              alt="women in videocall"
+              class="rounded-lg"
+            />
+          </div>
+          <div class="w-64 sm:w-40 xs:w-40 md:w-64">
+            <img
+              src="./assets/desktop/image-men-in-meeting.jpg"
+              alt="men in meeting"
+              class="rounded-lg"
+            />
+          </div>
+          <div class="w-64 sm:w-40 xs:w-40 md:w-64">
+            <img
+              src="./assets/desktop/image-man-texting.jpg"
+              alt="men in meeting"
+              class="rounded-lg"
+            />
+          </div>
+        </div>
+
+        <!-- Sub-headings -->
+        <div
+          class="flex flex-col justify-center items-center w-1/2 text-center sm:w-2/3 xs:w-full"
+        >
+          <div class="text-darkcyan uppercase text-base">
+            Built for modern use
+          </div>
+          <div class="text-4xl font-bold mt-4">
+            Smarter meetings, all in one place
+          </div>
+          <div class="mt-8 text-slate w-1/2 sm:w-full xs:w-full">
+            Send messages, share files, show your screen, and record your
+            meetings — all in one workspace. Control who can join with
+            invite-only team access, data encryption, and data export.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-40">
+      <div class="flex justify-center items-center relative top-6">
+        <span
+          class="relative border-slate border rounded-full text-xl text-slate p-4 text-center inline-block border-2 font-bold border-opacity-10 w-16 bg-white"
+          ><span
+            class="h-16 border absolute bottom-16 left-7 border-slate border-opacity-10"
+          ></span
+          >02</span
+        >
+      </div>
+
+      <section
+        class="md:grid md:grid-cols-3 md:gap-16 md:p-16 grid-flow-col sm:block sm:flex sm:flex-col sm:gap-8 sm:justify-center xs:block xs:flex xs:flex-col xs:gap-8 xs:p-8 xs:justify-center bg-image text-white bg-darkcyan text-center bg-blend-multiply"
+      >
+        <h1 class="text-4xl font-bold">Experience more together</h1>
+        <p>
+          Stay connected with reliable HD meetings and unlimited one-on-one and
+          group video sessions.
+        </p>
+        <button
+          class="bg-lightpurple text-white border-0 w-48 h-14 rounded-full text-lg font-bold hover:opacity-80 self-center"
+        >
+          Download<span class="opacity-50 ml-2">v1.3</span>
+        </button>
+      </section>
+    </footer>
+  </body>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            xs: "175px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+          },
+          colors: {
+            darkcyan: "#4D96A9",
+            lighcyan: "#8FE3F9",
+            purple: "#855FB1",
+            lightpurple: "#855FB1",
+            darkgray: "#28283D",
+            lightwhite: "FAFAFA",
+            slate: "#87879D",
+          },
+        },
+      },
+    };
+  </script>
+</html>

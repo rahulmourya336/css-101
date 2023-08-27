@@ -1,0 +1,10 @@
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.bg-image {
+  background-image: url("./assets/desktop/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
