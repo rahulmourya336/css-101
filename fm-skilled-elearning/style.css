@@ -236,6 +236,7 @@ footer {
   }
 
   .courses-card {
+    justify-content: center;
     gap: 42px 0px;
     padding: 25px;
   }
@@ -284,6 +285,7 @@ footer {
   }
 
   .courses-card {
+    justify-content: center;
     gap: 42px 11px;
     padding: 5px;
   }
