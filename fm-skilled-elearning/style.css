@@ -1,0 +1,287 @@
+:root {
+  --color-slate: #666ca3;
+  --color-dark-slate: #13183f;
+  --color-gray: #83869a;
+  --color-peach: #f74780;
+  --color-light-peach: #ffa7c3;
+  --color-white: #ffffff;
+  --color-card-shadow: rgba(6, 22, 141, 4.42%);
+  --color-gradient-peach: linear-gradient(
+    180deg,
+    rgba(255, 111, 72, 1) 30%,
+    rgba(240, 42, 166, 1) 100%
+  );
+  --color-gradient-purple: linear-gradient(
+    0deg,
+    rgba(240, 42, 166, 1) 20%,
+    rgba(72, 81, 255, 1) 100%
+  );
+  --color-gradient-white-bg: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 100%) 100%,
+    hsla(234, 100%, 97%, 100%) 100%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  background-color: var(--color-white);
+  background: var(--color-gradient-white-bg);
+}
+
+main {
+  margin: 25px 45px;
+}
+
+.heading {
+  font-weight: 800;
+}
+
+.heading.xl {
+  font-size: 56px;
+  line-height: 70px;
+}
+
+.heading.l {
+  font-size: 40px;
+  line-height: 51px;
+}
+
+.heading.m {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.heading.s {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.text.m,
+button,
+.link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.text {
+  color: var(--color-slate);
+}
+
+.text.s {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+button {
+  width: 167px;
+  height: 56px;
+  text-align: center;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  color: var(--color-white);
+  font-family: inherit;
+}
+
+button.primary {
+  background-color: var(--color-dark-slate);
+}
+
+button.secondary {
+  background: var(--color-gradient-peach);
+}
+
+button.tertiary {
+  background: var(--color-gradient-purple);
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero {
+  width: 457px;
+  height: 359px;
+}
+
+.hero > p {
+  margin-top: 29px;
+}
+
+.hero > button {
+  margin-top: 40px;
+}
+
+.hero-image {
+  background-image: url(./assets/image-hero-desktop@2x.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 29em;
+  width: 415px;
+  position: relative;
+  right: -45px;
+}
+
+.courses-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  gap: 56px 30px;
+  padding: 15px 0 115px 45px;
+  background: var(--color-gradient-white-bg);
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 322px;
+  border-radius: 15px;
+  box-shadow: 0px 25px 50px var(--color-card-shadow);
+}
+
+.card:nth-child(1) {
+  padding: 40px 30px 20px 30px;
+  color: var(--color-white);
+  background: var(--color-gradient-peach);
+}
+
+.card:not(:first-child) {
+  padding: 0 30px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 24px;
+}
+
+.icon {
+  position: absolute;
+  top: -30px;
+}
+
+.card > p.heading {
+  margin: 20px 0 0 0;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-peach);
+}
+
+.link:hover {
+  opacity: 0.5;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 120px;
+  color: var(--color-white);
+  background-color: var(--color-dark-slate);
+  align-items: center;
+  padding: 0 80px;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    margin: inherit 25px;
+  }
+
+  .hero {
+    width: 457px;
+    height: 359px;
+  }
+
+  .hero-image {
+    background-image: url(./assets/image-hero-tablet@2x.webp);
+  }
+
+  button {
+    width: 140px;
+    height: 48px;
+  }
+
+  .courses-card {
+    gap: 42px 0px;
+    padding: 25px;
+  }
+
+  .card {
+    width: 339px;
+    height: 383px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    margin: 10px 8px;
+  }
+
+  h1.heading {
+    margin-top: 25px;
+    font-size: 40px;
+  }
+
+  section {
+    gap: 162px;
+  }
+
+  .hero-image {
+    background-image: url(./assets/image-hero-mobile@2x.webp);
+    background-position: center;
+    height: 20em;
+    right: 0;
+  }
+
+  button {
+    width: 140px;
+    height: 48px;
+  }
+
+  .card:nth-child(1) {
+    padding: 18px;
+    height: 120px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .courses-card {
+    gap: 42px 11px;
+    padding: 5px;
+  }
+
+  .card {
+    width: 343px;
+    height: 283px;
+  }
+
+  footer {
+    margin-top: 140px;
+    padding: 0 8px;
+  }
+}
