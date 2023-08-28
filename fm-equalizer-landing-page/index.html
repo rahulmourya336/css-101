@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Equalizer landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="mx-auto">
+    <main class="m-10 md:m-20 xs:m-5 sm:m-5">
+      <nav>
+        <p class="font-bold text-body-l text-darkslate">equalizer</p>
+      </nav>
+
+      <section>
+        <div class="w-3/5 md:w-3/5 xs:w-full sm:w-full">
+          <h1
+            class="text-heading-l mt-32 md:text-heading-l xs:text-heading-m sm:text-heading-m xs:mt-16"
+          >
+            We make your music sound extraordinary.
+          </h1>
+          <p class="mt-10 xs:mt-5 text-body-l sm:text-body-m">
+            A system audio equalizer specifically designed for Android and iOS.
+            Freely tune the way your music sounds with a professional grade
+            parametric EQ & volume mixer. Control bass, mids, treble, gain
+            control, reverb, and more!
+          </p>
+        </div>
+      </section>
+
+      <!-- details -->
+      <div class="bg-darkslate mt-60 pattern-2 rounded-2xl relative text-white">
+        <img
+          src="./assets/illustration-app.png"
+          alt="app illustration"
+          class="bottom-40 left-32 bg-contain relative w-1/2 xl:w-1/3 md:w-1/2 lg:w-2/5 sm:w-1/2 xs:w-4/5 xs:left-8"
+        />
+
+        <div
+          class="bg-orange p-10 rounded-xl md:absolute md:right-20 md:-bottom-20 md:w-1/2 sm:static sm:w-full xs:static xs:w-full sm:p-8 xs:p-5"
+        >
+          <p class="text-heading-m">Premium EQ</p>
+          <p class="text-body-m mt-5">
+            Get expert-level control with a robust equalizer, volume mixer, and
+            spatial audio. Take your listening experience to a whole new level
+            and access all our incredible features!
+          </p>
+          <p class="flex items-center mt-10">
+            <span class="text-heading-m mr-3">$4</span>/ month
+          </p>
+          <div
+            class="flex items-center justify-center text-body-m font-bold flex-col gap-4 mt-10"
+          >
+            <button class="bg-darkslate hover:bg-skyblue p-4 rounded-lg w-full">
+              <img
+                src="./assets/icon-apple.svg"
+                alt="apple"
+                class="inline-block mr-2"
+              />
+              iOS Download
+            </button>
+            <button
+              class="bg-lightwhite hover:bg-yellow p-4 rounded-lg w-full text-black"
+            >
+              <img
+                src="./assets/icon-android.svg"
+                alt="android"
+                class="inline-block mr-2"
+              />
+              Android Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="mt-32 flex flex-wrap justify-between gap-8">
+        <p class="text-darkslate text-body-l font-bold">equalizer</p>
+        <p class="text-body-m">
+          All rights reserved © Equalizer 2021 <br />
+          Have any problems? Contact us via social media or <br />email us at
+          <span class="font-bold">equalizer@example.com</span>
+        </p>
+        <div class="flex gap-4">
+          <span class="cursor-pointer"
+            ><img
+              src="./assets/icon-facebook.svg"
+              alt="fb icon"
+              class="text-darkslate hover:text-orange"
+          /></span>
+          <span class="cursor-pointer"
+            ><img
+              src="./assets/icon-instagram.svg"
+              alt="instagram icon"
+              class="text-darkslate hover:text-orange"
+          /></span>
+          <span class="cursor-pointer"
+            ><img
+              src="./assets/icon-twitter.svg"
+              alt="twitter icon"
+              class="text-darkslate hover:text-orange"
+          /></span>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontSize: {
+          "heading-l": [
+            "5.5rem",
+            {
+              lineHeight: "5.5rem",
+              letterSpacing: "-0.01em",
+              fontWeight: "600",
+            },
+          ],
+          "heading-m": [
+            "2.5rem",
+            {
+              lineHeight: "3.25rem",
+              fontWeight: "600",
+            },
+          ],
+          "body-l": [
+            "1.25rem",
+            {
+              lineHeight: "2.125rem",
+              fontWeight: "500",
+            },
+          ],
+          "body-m": [
+            "1rem",
+            {
+              lineHeight: "1.625rem",
+              fontWeight: "500",
+            },
+          ],
+        },
+        extend: {
+          screens: {
+            xs: "175px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+          },
+          colors: {
+            skyblue: "#66E2DC",
+            orange: "#FA7453",
+            yellow: "#FFB964",
+            lightwhite: "#FCFAF9",
+            darkslate: "#191826",
+          },
+        },
+      },
+    };
+  </script>
+</html>
