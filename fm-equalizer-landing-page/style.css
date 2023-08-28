@@ -5,9 +5,9 @@ body {
 body {
   background-image: url("./assets/bg-main-desktop.png"),
     url("./assets/bg-pattern-1.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, auto;
-  background-position: top left, top -50px right;
+  background-repeat: repeat, no-repeat;
+  background-size: contain, auto;
+  background-position: top -100px left -120px, top -50px right;
 }
 
 .pattern-2 {
@@ -35,7 +35,7 @@ body {
     background-size: cover;
     background-position: top left;
   }
-  
+
   .pattern-2 {
     background-image: url("./assets/bg-pattern-2.svg");
     background-repeat: no-repeat;
