@@ -66,6 +66,10 @@ body {
   color: var(--color-gray-950);
 }
 
+.title:hover {
+  color: var(--color-yellow);
+}
+
 .description {
   color: var(--color-gray-500);
   line-height: 1.5em;

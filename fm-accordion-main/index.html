@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="heading">
+          <div>
+            <img src="assets/images/icon-star.svg" alt="faq icon" />
+          </div>
+          <div class="heading__title">FAQs</div>
+        </div>
+        <div class="list">
+          <div class="list__container">
+            <div class="list__title">
+              <div class="list__heading" onclick="toggleAccordion(1)">
+                What is Frontend Mentor, and how will it help me?
+              </div>
+              <div class="list__toggle">
+                <img
+                  src="./assets/images/icon-plus.svg"
+                  alt="toggle icon"
+                  onclick="toggleAccordion(1)"
+                  id="toggle_plus_1"
+                  class="active"
+                />
+                <img
+                  src="./assets/images/icon-minus.svg"
+                  alt="toggle icon"
+                  id="toggle_minus_1"
+                  onclick="toggleAccordion(1)"
+                  class=""
+                />
+              </div>
+            </div>
+            <div class="list__body" id="list__body_1">
+              Frontend Mentor offers realistic coding challenges to help
+              developers improve their frontend coding skills with projects in
+              HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+              for portfolio building.
+            </div>
+            <div class="separator"></div>
+          </div>
+
+          <div class="list__container">
+            <div class="list__title">
+              <div class="list__heading" onclick="toggleAccordion(2)">
+                Is Frontend Mentor free?
+              </div>
+              <div class="list__toggle">
+                <img
+                  src="./assets/images/icon-plus.svg"
+                  alt="toggle icon"
+                  class="active"
+                  id="toggle_plus_2"
+                  onclick="toggleAccordion(2)"
+                />
+                <img
+                  src="./assets/images/icon-minus.svg"
+                  alt="toggle icon"
+                  id="toggle_minus_2"
+                  class=""
+                  onclick="toggleAccordion(2)"
+                />
+              </div>
+            </div>
+            <div class="list__body" id="list__body_2">
+              Yes, Frontend Mentor offers both free and premium coding
+              challenges, with the free option providing access to a range of
+              projects suitable for all skill levels.
+            </div>
+            <div class="separator"></div>
+          </div>
+
+          <div class="list__container">
+            <div class="list__title">
+              <div class="list__heading" onclick="toggleAccordion(3)">
+                Can I use Frontend Mentor projects in my portfolio?
+              </div>
+              <div class="list__toggle">
+                <img
+                  src="./assets/images/icon-plus.svg"
+                  alt="toggle icon"
+                  class="active"
+                  id="toggle_plus_3"
+                  onclick="toggleAccordion(3)"
+                />
+                <img
+                  src="./assets/images/icon-minus.svg"
+                  alt="toggle icon"
+                  class=""
+                  id="toggle_minus_3"
+                  onclick="toggleAccordion(3)"
+                />
+              </div>
+            </div>
+            <div class="list__body" id="list__body_3">
+              Yes, you can use projects completed on Frontend Mentor in your
+              portfolio. It's an excellent way to showcase your skills to
+              potential employers!
+            </div>
+            <div class="separator"></div>
+          </div>
+
+          <div class="list__container">
+            <div class="list__title">
+              <div class="list__heading" onclick="toggleAccordion(4)">
+                How can I get help if I'm stuck on a Frontend Mentor challenge?
+              </div>
+              <div class="list__toggle">
+                <img
+                  src="./assets/images/icon-plus.svg"
+                  alt="toggle icon"
+                  id="toggle_plus_4"
+                  class="active"
+                  onclick="toggleAccordion(4)"
+                />
+                <img
+                  src="./assets/images/icon-minus.svg"
+                  alt="toggle icon"
+                  class=""
+                  id="toggle_minus_4"
+                  onclick="toggleAccordion(4)"
+                />
+              </div>
+            </div>
+            <div class="list__body" id="list__body_4">
+              The best place to get help is inside Frontend Mentor's Discord
+              community. There's a help channel where you can ask questions and
+              seek support from other community members.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="text/javascript">
+  let lastIndex;
+
+  function toggleAccordion(index) {
+    updateLast(index);
+    updateCurrent(index);
+    lastIndex = index;
+  }
+
+  function updateLast(currentIndexId) {
+    const lastIndexId = `list__body_${lastIndex}`;
+    const last_plus_icon = `toggle_plus_${lastIndex}`;
+    const last_minus_icon = `toggle_minus_${lastIndex}`;
+
+    if (lastIndex && lastIndex !== currentIndexId) {
+      const lastEle = document.getElementById(lastIndexId);
+      lastEle && lastEle.classList.remove("active");
+
+      document.getElementById(last_plus_icon).classList.add("active");
+      document.getElementById(last_minus_icon).classList.remove("active");
+    }
+  }
+
+  function updateCurrent(index) {
+    const currentIndexId = `list__body_${index}`;
+    const current_plus_icon = `toggle_plus_${index}`;
+    const current_minus_icon = `toggle_minus_${index}`;
+    const ele = document.getElementById(currentIndexId);
+    ele.classList.toggle("active");
+
+    document.getElementById(current_plus_icon).classList.toggle("active");
+    document.getElementById(current_minus_icon).classList.toggle("active");
+  }
+</script>
