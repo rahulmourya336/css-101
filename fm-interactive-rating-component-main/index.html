@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div id="rating__ui">
+          <div class="icon">
+            <img
+              src="./images/icon-star.svg"
+              alt="star icon"
+              height="16px"
+              width="16px"
+            />
+          </div>
+
+          <div class="content">
+            <div class="heading">How did we do?</div>
+            <div class="sub_heading">
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </div>
+          </div>
+
+          <div class="rating">
+            <div class="rate" onclick="selectRating(1)" id="__1">1</div>
+            <div class="rate" onclick="selectRating(2)" id="__2">2</div>
+            <div class="rate" onclick="selectRating(3)" id="__3">3</div>
+            <div class="rate" onclick="selectRating(4)" id="__4">4</div>
+            <div class="rate" onclick="selectRating(5)" id="__5">5</div>
+          </div>
+
+          <button onclick="toggleSubmit()">Submit</button>
+        </div>
+
+        <div id="submit__ui" class="hidden">
+          <div class="illustration">
+            <img
+              src="images/illustration-thank-you.svg"
+              alt="thank you"
+              height="162"
+              height="108"
+            />
+          </div>
+          <p class="rating_count" id="count"></p>
+          <p class="heading">Thank you!</p>
+          <p class="sub_heading text-center">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    let lastSelectedIndex = 0;
+    hideSubmitFeedbackUI();
+    function selectRating(index) {
+      if (lastSelectedIndex && lastSelectedIndex !== index) {
+        const lastElement = document.getElementById(`__${lastSelectedIndex}`);
+        lastElement.classList.remove("active");
+      }
+      const ele = document.getElementById(`__${index}`);
+      ele.classList.toggle("active");
+      lastSelectedIndex = index;
+    }
+
+    function toggleSubmit() {
+      const ratingEle = document.getElementById("rating__ui");
+      ratingEle.style.display = "none";
+
+      const submissionEle = document.getElementById("submit__ui");
+      submissionEle.style.display = "block";
+
+      const countEle = document.getElementById("count");
+      countEle.innerText = `You selected ${lastSelectedIndex} out of 5`;
+      
+    }
+
+    function hideSubmitFeedbackUI() {
+      const submissionEle = document.getElementById("submit__ui");
+      submissionEle.style.display = "none";
+    }
+  </script>
+</html>
