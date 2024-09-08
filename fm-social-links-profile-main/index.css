@@ -1,0 +1,102 @@
+:root {
+  --color-Green: hsl(75, 94%, 57%);
+  --color-White: hsl(0, 0%, 100%);
+  --color-Grey-700: hsl(0, 0%, 20%);
+  --color-Grey-800: hsl(0, 0%, 12%);
+  --color-Grey-900: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Inter", system-ui;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  background-color: var(--color-Grey-900);
+  color: var(--color-White);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 10px;
+}
+
+.wrapper {
+  border-radius: 12px;
+  padding: 40px;
+  background-color: var(--color-Grey-800);
+  width: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image > img {
+  border-radius: 55px;
+}
+
+.heading_section {
+  margin: 24px 0;
+}
+
+.heading {
+  color: var(--color-White);
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.sub_heading {
+  color: var(--color-Green);
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.quote {
+  margin-bottom: 24px;
+}
+
+.social_buttons {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--color-Grey-700);
+  color: var(--color-White);
+  padding: 5px;
+  border: none;
+  height: 45px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.button:hover {
+  background-color: var(--color-Green);
+  color: #000;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 0.7em;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 2em;
+  }
+
+  .button {
+    font-size: 1em;
+  }
+}
