@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="info">
+        <div class="heading">Learn to code by watching others</div>
+        <div class="sub_heading">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </div>
+      </div>
+      <div class="form">
+        <div class="payment">
+          <div class="banner">
+            <span class="font-bold">Try it free 7 days</span> then
+            <span class="newline"> $20 mo. therafter</span>
+          </div>
+        </div>
+        <div class="form-input">
+          <form onsubmit="validateFrom()" action="#">
+            <div class="input">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First Name"
+                id="fn"
+              />
+              <span
+                ><img
+                  src="images/icon-error.svg"
+                  alt="error icon"
+                  class="error-icon"
+                  id="error_icon_fn"
+                />
+                <p id="fn_error" class="error-text italics"></p>
+              </span>
+            </div>
+            <div class="input">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Last Name"
+                id="ln"
+              />
+              <span
+                ><img
+                  src="images/icon-error.svg"
+                  alt="error icon"
+                  class="error-icon"
+                  id="error_icon_ln" />
+                <p id="ln_error" class="error-text italics"></p
+              ></span>
+            </div>
+            <div class="input">
+              <input
+                type="email"
+                class="form-control"
+                autocomplete="username"
+                placeholder="Email Address"
+                id="email"
+              />
+              <span
+                ><img
+                  src="images/icon-error.svg"
+                  alt="error icon"
+                  class="error-icon"
+                  id="error_icon_email" />
+                <p id="email_error" class="error-text italics"></p
+              ></span>
+            </div>
+            <div class="input">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                autocomplete="current-password"
+                id="pwd"
+              />
+              <span
+                ><img
+                  src="images/icon-error.svg"
+                  alt="error icon"
+                  class="error-icon"
+                  id="error_icon_pwd" />
+                <p id="pwd_error" class="error-text italics"></p
+              ></span>
+            </div>
+            <button class="form-control button">CLAIM YOUR FREE TRIAL</button>
+            <span class="text-muted"
+              >By clicking the button, you are agreeing to our
+              <span class="text-primary">Terms and Services</span></span
+            >
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script type="text/javascript">
+    const fnErrorMessage = document.getElementById("fn_error");
+    const lnErrorMessage = document.getElementById("ln_error");
+    const emailErrorMessage = document.getElementById("email_error");
+    const pwdErrorMessage = document.getElementById("pwd_error");
+
+    const inputFn = document.getElementById("fn");
+    const inputLn = document.getElementById("ln");
+    const inputEmail = document.getElementById("email");
+    const inputPwd = document.getElementById("pwd");
+
+    const errorIconFn = document.getElementById("error_icon_fn");
+    const errorIconLn = document.getElementById("error_icon_ln");
+    const errorIconEmail = document.getElementById("error_icon_email");
+    const errorIconPwd = document.getElementById("error_icon_pwd");
+
+    resetUI();
+    function resetUI() {
+      errorIconFn.style.visibility = "hidden";
+      errorIconLn.style.visibility = "hidden";
+      errorIconEmail.style.visibility = "hidden";
+      errorIconPwd.style.visibility = "hidden";
+    }
+
+    function validateFrom() {
+      if (!inputFn.value) {
+        fnErrorMessage.innerText = "First Name cannot be empty";
+        errorIconFn.style.visibility = "visible";
+        inputFn.classList.add("error");
+      } else {
+        fnErrorMessage.innerText = "";
+        errorIconFn.style.visibility = "hidden";
+        inputFn.classList.remove("error");
+      }
+
+      if (!inputLn.value) {
+        lnErrorMessage.innerText = "Last Name cannot be empty";
+        errorIconLn.style.visibility = "visible";
+        inputLn.classList.add("error");
+      } else {
+        lnErrorMessage.innerText = "";
+        errorIconLn.style.visibility = "hidden";
+        inputLn.classList.remove("error");
+      }
+
+      const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+      if (!emailRegex.test(inputEmail.value)) {
+        emailErrorMessage.innerText = "Looks like this is not an email";
+        errorIconEmail.style.visibility = "visible";
+        inputEmail.classList.add("error");
+      } else {
+        emailErrorMessage.innerText = "";
+        errorIconEmail.style.visibility = "hidden";
+        inputEmail.classList.remove("error");
+      }
+
+      if (!inputPwd.value) {
+        pwdErrorMessage.innerText = "Password cannot be empty";
+        errorIconPwd.style.visibility = "visible";
+        inputPwd.classList.add("error");
+      } else {
+        pwdErrorMessage.innerText = "";
+        errorIconPwd.style.visibility = "hidden";
+        inputPwd.classList.remove("error");
+      }
+    }
+  </script>
+</html>
