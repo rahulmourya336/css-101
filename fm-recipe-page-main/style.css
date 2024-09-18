@@ -1,0 +1,174 @@
+:root {
+  --color-Stone-100: hsl(30, 54%, 90%);
+  --color-Stone-150: hsl(30, 18%, 87%);
+  --color-Stone-600: hsl(30, 10%, 34%);
+  --color-Stone-900: hsl(24, 5%, 18%);
+  --color-Brown-800: hsl(14, 45%, 36%);
+  --color-Rose-800: hsl(332, 51%, 32%);
+  --color-Rose-50: hsl(330, 100%, 98%);
+}
+
+::marker {
+  color: var(--color-Brown-800);
+  font-size: small;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.young-serif-regular {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+
+.outfit-400 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+
+.outfit-600 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+}
+
+.outfit-700 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1em;
+  background-color: var(--color-Stone-100);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+  padding: 40px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 24px;
+  width: 736px;
+}
+
+.hero-image {
+  border-radius: 12px;
+}
+
+.sub_heading {
+  margin-top: 40px;
+}
+
+.sub_heading.title {
+  font-size: 40px;
+  color: var(--color-Stone-900);
+}
+
+p.description {
+  margin: 24px 0 0 0;
+  color: var(--color-Stone-600);
+}
+
+.prep {
+  margin: 32px 0;
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+}
+
+.time {
+  padding: 24px;
+  background-color: var(--color-Rose-50);
+  border-radius: 12px;
+}
+
+.time > .title {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  color: var(--color-Rose-800);
+}
+
+strong {
+  font-weight: bold;
+}
+
+ul,
+ol {
+  padding-inline-start: 18px;
+}
+
+li {
+  color: var(--color-Stone-600);
+  margin: 7px 0;
+  padding-left: 14px;
+  line-height: 28px;
+}
+
+.hr {
+  border: 0.6px solid var(--color-Stone-150);
+}
+
+.ingredients > .title {
+  margin: 0 0 24px 0;
+  font-size: 28px;
+  color: var(--color-Rose-800);
+}
+
+.nutrition {
+  margin: 32px 0 0 0;
+  display: flex;
+  gap: 24px;
+  flex-direction: row;
+}
+
+p.sub--heading {
+  margin: 24px 0;
+  color: var(--color-Stone-600);
+}
+
+table {
+  color: var(--color-Stone-600);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.border-b {
+  border-bottom: 1px solid var(--color-Stone-150);
+}
+
+td {
+  width: calc(100vw);
+  padding: 8px;
+}
+
+.bold {
+  font-weight: bold;
+  color: var(--color-Brown-800);
+}
+
+/* When the browser is at least 600px and above */
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0px;
+    border-radius: 0;
+    margin: 0px auto;
+  }
+
+  .wrapper {
+    padding: 20px;
+  }
+
+  .hero-image {
+    border-radius: 0;
+  }
+}
