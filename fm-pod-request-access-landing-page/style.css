@@ -1,0 +1,241 @@
+:root {
+  --color-green: #54e6af;
+  --color-blue-950: #121725;
+  --color-blue-900: #2c344b;
+  --color-blue-600: #5a668a;
+  --color-blue-300: #c2cbe5;
+  --color-white: #fff;
+  --color-red: #fb3e3e;
+}
+
+::placeholder {
+  color: var(--color-white);
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+body {
+  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--color-blue-950);
+  outline: none;
+  background-image: url("./assets/desktop/bg-pattern-dots.svg"),
+    url("./assets/desktop/image-host.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom, right center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  padding: 80px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 95px;
+}
+
+.font-48 {
+  font-size: 48px;
+  font-weight: 100;
+}
+
+p.primary-text,
+p.secondary-text {
+  line-height: 1.2em;
+}
+
+.primary-text {
+  color: var(--color-green);
+}
+
+.secondary-text {
+  color: var(--color-white);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.heading {
+  padding: 88px 64px 0 0;
+  width: calc(100vw - 55vw);
+}
+
+.sub-text {
+  color: var(--color-blue-300);
+  margin-top: 24px;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.form-group {
+  position: relative;
+  display: inline-block;
+  /* width: 100%; */
+}
+
+.form-control {
+  border-radius: 999px;
+  border: none;
+  background-color: var(--color-blue-900);
+  padding: 10px 180px 10px 20px;
+  /* width: 70%; */
+  border: 4px solid var(--color-blue-900);
+  color: #fff;
+}
+
+.button {
+  border: none;
+  background-color: var(--color-green);
+  color: var(--color-blue-950);
+  font-weight: bold;
+  border-radius: 999px;
+  position: absolute;
+  height: 40px;
+  padding: 4px 20px;
+  top: 6px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #b3ffe2;
+}
+
+.subscribe {
+  margin: 40px 0;
+  position: relative;
+}
+
+.podcasts {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  column-gap: 40px;
+  opacity: 0.6;
+  padding: 0 0 20px 0;
+}
+
+.error-text {
+  color: var(--color-red);
+  font-weight: bold;
+  margin: 8px 0 0 24px;
+  font-size: 12px;
+}
+
+.error {
+  outline: 2px solid var(--color-red);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.bg-primary {
+  background-color: var(--color-blue-950);
+}
+
+/* When the browser is at least 600px and above */
+@media screen and (max-width: 975px) {
+  .logo {
+    margin-bottom: 105px;
+  }
+  main {
+    padding: 44px;
+  }
+  .heading {
+    padding: 88px 64px 0 0;
+    width: calc(100vw - 35vw);
+  }
+  body {
+    background-image: url("./assets/desktop/bg-pattern-dots.svg"),
+      url("./assets/tablet/image-host.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom, top right;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  main {
+    padding: 36px;
+    flex-direction: column;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px 0;
+  }
+
+  .heading {
+    padding: 0px 0px 0 0;
+    width: calc(100vw - 10vw);
+  }
+
+  body {
+    background-image: url("./assets/mobile/image-host.jpg");
+    background-size: cover;
+  }
+
+  p.primary-text,
+  p.secondary-text {
+    font-size: 32px;
+  }
+
+  .sub-text {
+    font-size: 14px;
+  }
+
+  .bg-primary {
+    background-color: unset;
+    text-align: center;
+  }
+
+  .podcasts {
+    padding: 30px 0;
+    column-gap: 20px;
+  }
+
+  .subscribe {
+    margin: 10px;
+  }
+
+  .form-control {
+    padding: 10px 180px 10px 20px;
+    width: 100%;
+    border: 4px solid var(--color-blue-900);
+  }
+
+  .button {
+    border: none;
+    background-color: var(--color-green);
+    color: var(--color-blue-950);
+    font-weight: bold;
+    border-radius: 999px;
+    position: absolute;
+    height: 46px;
+    padding: 4px 20px;
+    right: 0px;
+    top: 58px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .error-text {
+    position: absolute;
+    top: 105px;
+    text-align: center;
+    right: 30%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+  }
+}

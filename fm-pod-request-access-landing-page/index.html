@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Pod request access landing page</title>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="logo">
+          <img src="./assets/desktop/logo.svg" alt="logo" />
+        </div>
+
+        <div class="bg-primary">
+          <div class="heading">
+            <p class="primary-text uppercase font-48">Publish your podcasts</p>
+            <p class="secondary-text uppercase font-48">everywhere.</p>
+            <p class="sub-text">
+              Upload your audio to Pod with a single click. We’ll then
+              distribute your podcast to Spotify, Apple Podcasts, Google
+              Podcasts, Pocket Casts and more!
+            </p>
+          </div>
+
+          <div class="footer">
+            <div class="subscribe">
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Email address"
+                  maxlength="35"
+                  autocomplete="off"
+                />
+                <button type="button" onclick="validateEmail()" class="button">
+                  Request Access
+                </button>
+              </div>
+              <p class="error-text hidden" id="error-text">
+                Oops! Please check your email
+              </p>
+            </div>
+
+            <div class="podcasts">
+              <img src="./assets/desktop/spotify.svg" alt="spotify logo" />
+              <img
+                src="./assets/desktop/apple-podcast.svg"
+                alt="apple podcast logo"
+              />
+              <img
+                src="./assets/desktop/google-podcasts.svg"
+                alt="google podcast logo"
+              />
+              <img
+                src="./assets/desktop/pocket-casts.svg"
+                alt="pocket cast logo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="text/javascript">
+    const input = document.getElementById("email");
+    const errorText = document.getElementById("error-text");
+
+    const validate = (email) => {
+      return email.match(
+        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+    };
+
+    function validateEmail() {
+      const email = input.value;
+      const validEmail = validate(email);
+      if (!validEmail) {
+        input.classList.add("error");
+        errorText.classList.remove("hidden");
+      } else {
+        input.classList.remove("error");
+        errorText.classList.add("hidden");
+      }
+    }
+  </script>
+</html>
