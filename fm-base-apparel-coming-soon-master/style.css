@@ -18,7 +18,10 @@ body {
   font-size: 1em;
   font-family: "Josefin Sans", system-ui;
   font-optical-sizing: auto;
-  background-image: var(--color-Linear-white);
+  background-repeat: no-repeat;
+  background-image: url("images/bg-pattern-desktop.svg"),
+    var(--color-Linear-white);
+  background-size: contain;
 }
 
 ::placeholder {
