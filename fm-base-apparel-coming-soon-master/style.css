@@ -145,6 +145,13 @@ body {
   padding: 15px;
 }
 
+@media screen and (max-width: 875px) {
+  .text {
+    padding: 40px;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 475px) {
   .subscription {
     margin-top: 32px;
