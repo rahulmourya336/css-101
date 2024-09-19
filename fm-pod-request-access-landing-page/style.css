@@ -1,6 +1,7 @@
 :root {
   --color-green: #54e6af;
   --color-blue-950: #121725;
+  --color-blue-950-opacity: rgb(18, 23, 37, 0.5);
   --color-blue-900: #2c344b;
   --color-blue-600: #5a668a;
   --color-blue-300: #c2cbe5;
@@ -163,6 +164,9 @@ p.secondary-text {
   main {
     padding: 36px;
     flex-direction: column;
+    height: 100vh;
+    background-color: var(--color-blue-950-opacity);
+    justify-content: center;
   }
 
   .logo {
