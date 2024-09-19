@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <main class="container">
+      <img
+        src="./images/logo.svg"
+        alt="base apparel logo"
+        class="mobile-logo"
+      />
+      <div class="mobile-banner"></div>
+      <div class="text">
+        <img
+          src="./images/logo.svg"
+          alt="base apparel logo"
+          class="desktop-logo"
+        />
+        <div class="content">
+          <p class="banner-text text-greyish-red">We're</p>
+          <p class="banner-text text-black">coming</p>
+          <p class="banner-text text-black">soon</p>
+
+          <p class="sub-text">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+
+          <div class="subscription">
+            <input
+              type="text"
+              placeholder="Email address"
+              class="form-control"
+              autocomplete="off"
+              maxlength="32"
+              id="email"
+            />
+            <img
+              src="./images/icon-error.svg"
+              alt="error-icon"
+              id="error-icon"
+              class="error-icon hide"
+            />
+            <button class="button" onclick="validateEmail()">
+              <img src="./images/icon-arrow.svg" alt="arrow icon submit" />
+            </button>
+            <p class="error-text hide" id="error-text">
+              Please provide a valid email
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="desktop-banner"></div>
+    </main>
+  </body>
+  <script class="text/javascript">
+    const errorText = document.getElementById("error-text");
+    const errorIcon = document.getElementById("error-icon");
+    const input = document.getElementById("email");
+
+    const validate = (email) => {
+      return email.match(
+        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+    };
+
+    function validateEmail() {
+      const email = input.value;
+      const validEmail = validate(email);
+      if (!validEmail) {
+        input.classList.add("error");
+        errorText.classList.remove("hide");
+        errorText.classList.add("show");
+        errorIcon.classList.remove("hide");
+        errorIcon.classList.add("show");
+      } else {
+        input.classList.remove("error");
+        errorText.classList.add("hide");
+        errorText.classList.remove("show");
+        errorIcon.classList.add("hide");
+        errorIcon.classList.remove("show");
+      }
+    }
+  </script>
+</html>
