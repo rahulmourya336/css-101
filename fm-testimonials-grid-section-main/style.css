@@ -16,13 +16,13 @@ body {
 
 .container {
   width: 75dvw;
-  margin: 18vh auto;
+  margin: 19vh auto;
   height: 100dvh;
 }
 
 div.testimonial {
   border-radius: 8px;
-  padding: 30px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -110,7 +110,7 @@ div.testimonial:nth-child(5) {
 
 .body {
   color: var(--color-Light-gray);
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-size: 13px;
 }
 
