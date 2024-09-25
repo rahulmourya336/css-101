@@ -15,8 +15,8 @@ body {
 }
 
 main {
-  width: min(95vh, 70vh, 80vh);
-  margin: max(2%, 5%) auto;
+  width: min(85vh, 70vh, 80vh);
+  margin: max(12%, 5%) auto;
 }
 
 div.section {
@@ -32,7 +32,7 @@ div.section {
 
 .summary {
   background-color: var(--color-Soft-red);
-  color: #fff;
+  color: var(--color-Very-pale-orange);
 }
 
 .chart-plot {
