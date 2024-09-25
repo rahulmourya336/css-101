@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Expenses chart component | Project by Rahul Mourya</title>
+  </head>
+  <body>
+    <main>
+      <div class="summary section bg-illustration">
+        <p>My balance</p>
+        <p class="fs-20 text-bold">$921.48</p>
+      </div>
+      <div class="section mt-auto data">
+        <div class="chart">
+          <p class="fs-20 text-bold text-dark-brown">Spending - Last 7 days</p>
+          <div class="chart-plot">
+            <div>
+              <p class="bg-orange h-50 bar" data-value="$17.45" data-value="$17.45"></p>
+              <p class="text-medium-brown lh-2">mon</p>
+            </div>
+            <div>
+              <p class="bg-orange h-100 bar" data-value="$34.91"></p>
+              <p class="text-medium-brown lh-2">tue</p>
+            </div>
+            <div>
+              <p class="bg-cyan h-150 bar" data-value="$52.36"></p>
+              <p class="text-medium-brown lh-2">wed</p>
+            </div>
+            <div>
+              <p class="bg-orange h-89 bar" data-value="$31.07"></p>
+              <p class="text-medium-brown lh-2">thu</p>
+            </div>
+            <div>
+              <p class="bg-orange h-67 bar" data-value="$23.39"></p>
+              <p class="text-medium-brown lh-2">fri</p>
+            </div>
+            <div>
+              <p class="bg-orange h-124 bar" data-value="$43.28"></p>
+              <p class="text-medium-brown lh-2">sat</p>
+            </div>
+            <div>
+              <p class="bg-orange h-73 bar" data-value="$25.48"></p>
+              <p class="text-medium-brown lh-2">sun</p>
+            </div>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="total">
+          <div class="this-month">
+            <p class="text-medium-brown">Total this month</p>
+            <p class="fs-48 text-bold text-left text-dark-brown">$478.33</p>
+          </div>
+          <div class="surge">
+            <p class="fs-18 text-bold text-dark-brown">+2.4%</p>
+            <p class="text-medium-brown">from last month</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- My balance $921.48 Spending - Last 7 days mon tue wed thu fri sat sun Total
+    this month $478.33 +2.4% from last month -->
+  </body>
+</html>
