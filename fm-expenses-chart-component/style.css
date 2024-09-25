@@ -15,7 +15,7 @@ body {
 }
 
 main {
-  width: min(85vh, 70vh, 80vh);
+  width: 78vh;
   margin: max(12%, 5%) auto;
 }
 
