@@ -15,13 +15,13 @@ body {
 }
 
 main {
-  width: 70vh;
+  width: 540px;
   margin: max(12%, 5%) auto;
 }
 
 div.section {
   border-radius: 20px;
-  padding: min(max(15px, 4vw), 24px);
+  padding: min(max(16px, 4vw), 32px);
 }
 
 .bg-illustration {
