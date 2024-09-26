@@ -1,0 +1,321 @@
+:root {
+  --color-black: #030303;
+  --color-cyan: #61c4b7;
+  --color-grey: #7a746e;
+  --color-light-pink: #f39e9e;
+  --color-maroon: #552049;
+  --color-orange: #f6a560;
+  --color-purple: #755cde;
+  --color-soft-red: #eb7565;
+  --color-white: #fff7f0;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.1em;
+  line-height: 28px;
+  background-color: var(--color-white);
+}
+
+.text-l {
+  line-height: normal;
+  font-weight: bold;
+  font-size: min(max(36px, 4vw), 70px);
+}
+
+.text-m {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 51px;
+}
+
+.text-s {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 28px;
+  padding: 10px 30px;
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.primary-btn {
+  background-color: var(--color-black);
+  font-size: min(max(14px, 4vw), 16px);
+}
+
+.primary-btn:hover {
+  background-color: var(--color-purple);
+}
+
+.secondary-btn {
+  background-color: var(--color-soft-red);
+  padding: 10px 25px;
+}
+
+.secondary-btn:hover {
+  background-color: var(--color-orange);
+  padding: 10px 25px;
+}
+
+.round-btn-left {
+  padding: 30px;
+  background-color: var(--color-black);
+  background-image: url("./assets/icon-arrow-left.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 999px;
+}
+
+.round-btn-right {
+  margin-left: 16px;
+  border-radius: 999px;
+  padding: 30px;
+  background-color: var(--color-black);
+  background-image: url("./assets/icon-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.round-btn-left:hover,
+.round-btn-right:hover {
+  background-color: var(--color-purple);
+}
+
+main {
+  width: 98dvw;
+  margin: 2vw auto;
+}
+
+.wrapper {
+  margin: auto clamp(5vw, 10vw, 4vw);
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-heading {
+  padding: 0 clamp(11vw, 10vw, 4vw);
+  color: var(--color-grey);
+  font-size: 18px;
+  font-weight: 500;
+  margin: min(max(16px, 4vw), 23px) auto;
+}
+
+.title {
+  margin-top: min(max(32px, 4vw), 66px);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.cards {
+  margin: min(max(32px, 4vw), 80px) auto min(max(100px, 4vw), 136px) auto;
+  display: grid;
+  gap: 24px;
+  grid-template-areas:
+    "one two three four four"
+    "one five five six six";
+}
+
+.cards > div {
+  border-radius: 8px;
+  padding: min(max(20px, 4vw), 40px);
+  font-size: 24px;
+  color: var(--color-white);
+  font-weight: 600;
+  display: flex;
+  align-items: end;
+  background-repeat: no-repeat;
+  background-position: top 40px right 40px;
+}
+
+.cards > div:nth-child(1) {
+  background-color: var(--color-purple);
+  background-image: url("./assets/pattern-graphic-design.svg");
+  min-height: 364px;
+  grid-area: one;
+}
+
+.cards > div:nth-child(2) {
+  background-color: var(--color-orange);
+  background-image: url("./assets/pattern-ui-ux.svg");
+  height: 182px;
+  grid-area: two;
+}
+
+.cards > div:nth-child(3) {
+  background-color: var(--color-light-pink);
+  background-image: url("./assets/pattern-apps.svg");
+  height: 182px;
+  grid-area: three;
+}
+
+.cards > div:nth-child(4) {
+  background-color: var(--color-cyan);
+  background-image: url("./assets/pattern-photography.svg");
+  height: 182px;
+  grid-area: four;
+}
+
+.cards > div:nth-child(5) {
+  background-color: var(--color-soft-red);
+  background-image: url("./assets/pattern-illustrations.svg");
+  height: 182px;
+  grid-area: five;
+}
+
+.cards > div:nth-child(6) {
+  background-color: var(--color-maroon);
+  background-image: url("./assets/pattern-motion-graphics.svg");
+  height: 182px;
+  grid-area: six;
+}
+
+.intro {
+  display: flex;
+  gap: 125px;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.text-maroon {
+  color: var(--color-grey);
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  align-items: center;
+  justify-content: center;
+}
+.mt-auto {
+  margin: 88px 0 56px 0;
+}
+
+.mb-auto {
+  margin: 56px 0 88px 0;
+}
+
+.slider {
+  display: flex;
+  gap: 30px;
+}
+
+.slider > img {
+  width: 540px;
+  height: 340px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.booking {
+  padding: min(max(30px, 4vw), 60px);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  align-items: center;
+  margin-bottom: min(max(32px, 4vw), 56px);
+}
+
+.booking-sub-text {
+  width: min(max(100%, 4vw), 40ch);
+  margin: min(max(12px, 4vw), 25px) 0;
+}
+
+.w-12 {
+  width: 320px;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+/* .profile-image {
+  min-height: min(445px, 40vw);
+  min-width: min(445px, 40vw);
+} */
+
+@media screen and (max-width: 975px) {
+  .cards {
+    grid-template-areas:
+      "one one two three "
+      "one one four four"
+      "five five six six";
+  }
+  .intro {
+    gap: 69px;
+    flex-wrap: wrap;
+  }
+  .description {
+    gap: 24px;
+  }
+  .booking {
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .slider > img {
+    height: 360px;
+    width: 540px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .wrapper {
+    width: 98dvw;
+    margin: 20px 0px;
+  }
+  .cards {
+    grid-template-areas:
+      "one one "
+      "two three"
+      "four four"
+      "five five"
+      "six six";
+  }
+  .intro {
+    gap: 40px;
+    text-align: center;
+  }
+  .work {
+    display: flex;
+    gap: 32px;
+  }
+
+  .mt-auto {
+    margin: 100px 0 56px 0;
+  }
+  .mb-auto {
+    margin: 56px 0 100px 0;
+  }
+  .slider > img {
+    height: 180px;
+    width: 270px;
+  }
+  .booking {
+    flex-wrap: wrap;
+  }
+}
