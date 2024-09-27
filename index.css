@@ -228,4 +228,25 @@ mark {
   .projects {
     justify-content: center;
   }
+  .description {
+    height: unset;
+    text-align: unset;
+    overflow: unset;
+    line-height: 1.8em;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .card {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+  .projects {
+    gap: 0.5em;
+  }
+  .project-preview {
+    width: 290px;
+    margin: 0 auto;
+    display: block;
+  }
 }
