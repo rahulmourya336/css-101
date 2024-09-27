@@ -81,7 +81,7 @@
         <div class="text-s">My Work</div>
       </section>
 
-      <section class="work overflow-auto">
+      <section class="work overflow-auto" id="scroll">
         <div class="slider">
           <img src="./assets/image-slide-1.jpg" alt="work item" />
           <img src="./assets/image-slide-2.jpg" alt="work item" />
@@ -93,8 +93,14 @@
 
       <section class="work mb-auto">
         <div class="slider-controls">
-          <button class="round-btn-left"></button>
-          <button class="round-btn-right"></button>
+          <button
+            class="round-btn-left"
+            onclick="document.getElementById('scroll').scrollBy(-240, 0)"
+          ></button>
+          <button
+            class="round-btn-right"
+            onclick="document.getElementById('scroll').scrollBy(240, 0)"
+          ></button>
         </div>
       </section>
 
