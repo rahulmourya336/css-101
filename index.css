@@ -6,7 +6,9 @@
 }
 
 body {
-  font-family: "Barlow Semi Condensed", sans-serif;
+  /* font-family: "Barlow Semi Condensed", sans-serif; */
+  font-family: "Gowun Batang", serif;
+
   font-weight: 400;
   background-color: #393b3f;
   color: #fff;
@@ -102,12 +104,10 @@ h1 > img {
 
 .description {
   height: 45px;
-  text-align: justify;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  text-align: left;
   overflow: hidden;
-  line-height: 1.5em;
+  line-height: 1.8em;
+  width: max-content;
 }
 
 .card-footer {
@@ -141,7 +141,7 @@ h1 > img {
   margin-right: 6px;
   border-radius: 5px;
   font-size: 14px;
-  padding: 3px 6px;
+  padding: 2px 5px;
   text-transform: capitalize;
   opacity: 0.6;
   border: 1px solid lightgray;
@@ -223,6 +223,7 @@ mark {
     width: 320px;
     margin: 0 auto;
     display: block;
+    object-fit: cover;
   }
 
   .projects {
