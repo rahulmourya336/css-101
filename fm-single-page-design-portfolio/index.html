@@ -95,11 +95,11 @@
         <div class="slider-controls">
           <button
             class="round-btn-left"
-            onclick="document.getElementById('scroll').scrollBy(-240, 0)"
+            onclick="handleScroll('left')"
           ></button>
           <button
             class="round-btn-right"
-            onclick="document.getElementById('scroll').scrollBy(240, 0)"
+            onclick="handleScroll('right')"
           ></button>
         </div>
       </section>
@@ -129,4 +129,16 @@
       </div>
     </main>
   </body>
+
+  <script type="text/javascript">
+    function handleScroll(type) {
+      const element = document.getElementById("scroll");
+      const scrollWidth = element.scrollWidth;
+      if (type === "left") {
+        element.scrollBy(-(scrollWidth / 6), 0);
+      } else {
+        element.scrollBy(scrollWidth / 6, 0);
+      }
+    }
+  </script>
 </html>
