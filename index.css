@@ -111,7 +111,7 @@ h1 > img {
 }
 
 .card-footer {
-  padding: 18px 0 0 20px;
+  padding: 14px 0 0 18px;
   border-top: 1px solid hsl(0, 0%, 59%, 0.3);
   display: flex;
   justify-content: space-between;
