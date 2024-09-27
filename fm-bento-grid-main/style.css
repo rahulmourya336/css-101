@@ -11,11 +11,13 @@ body {
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-optical-sizing: auto;
+  background-color: #f6f5f6;
 }
 
 main {
   width: 75vw;
-  margin: 50px auto;
+  margin: 40px auto;
+  /* margin: max(max(14vh, 4vw), 10px) auto; */
 }
 
 .text-l {
@@ -89,6 +91,11 @@ main {
   align-items: center;
 }
 
+.image-fix {
+  width: 354px;
+  max-width: unset;
+}
+
 .wrapper > div:nth-child(1) {
   padding: min(max(24px, 4vw), 32px);
   background-color: var(--color-Yellow-100);
@@ -113,6 +120,8 @@ main {
   justify-content: center;
   flex-direction: column;
   gap: 24px;
+  align-self: flex-start;
+
   /* min-width: 343px;
     max-width: 544px;
     min-height: 290px;
@@ -128,10 +137,12 @@ main {
   justify-content: start;
   flex-direction: column;
   gap: 24px;
-  /* min-width: 256px;
+  min-width: 256px;
+  /*
   max-width: 343px;
   min-height: 354px;
   max-height: 437px; */
+  overflow: hidden;
   grid-area: four;
 }
 
@@ -227,6 +238,17 @@ main {
       "six six"
       "seven eight";
   }
+  .image-fix {
+    width: 100%;
+  }
+  .wrapper > div:nth-child(7) {
+    flex-direction: row;
+    align-items: center;
+  }
+  .wrapper > div:nth-child(5),
+  .wrapper > div:nth-child(6) {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 475px) {
@@ -249,5 +271,12 @@ main {
   }
   .wrapper > div:nth-child(3) {
     text-align: center;
+  }
+  .image-fix {
+    width: 100%;
+  }
+  .wrapper > div:nth-child(7) {
+    flex-direction: column;
+    align-items: start;
   }
 }
