@@ -12,9 +12,12 @@
       sizes="32x32"
       href="./favicon-32x32.png"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -25,6 +28,23 @@
   </body>
   <script>
     const projectList = [
+      {
+        meta: {
+          thumbnail: "./fm-bento-grid-main/preview.jpg",
+          altText: "Bento Grid",
+        },
+        body: {
+          favicon: "./favicon-32x32.png",
+          heading: "Bento Grid -(WIP)",
+          github:
+            "https://github.com/rahulmourya336/css-101/tree/master/fm-bento-grid-main",
+          tags: ["Grid", "Responsive UI"],
+        },
+        footer: {
+          buildTime: "6:30 Hours",
+          viewLink: "./fm-bento-grid-main/",
+        },
+      },
       {
         meta: {
           thumbnail: "./fm-single-page-design-portfolio/preview.jpg",
@@ -713,12 +733,12 @@
         return `<span class='tag'> ${tag}</span>`;
       });
 
-      projectDescription.innerHTML = tags.join('');
-      
+      projectDescription.innerHTML = tags.join("");
+
       cardBodyEle.appendChild(projectFaviconEle);
       cardBodyEle.appendChild(projectHeading);
       cardBodyEle.appendChild(projectDescription);
-      
+
       // Card Body
       cardEle.appendChild(cardBodyEle);
 
