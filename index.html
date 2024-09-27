@@ -27,10 +27,9 @@
   </body>
   <script>
     const projectList = [
-    {
+      {
         meta: {
-          thumbnail:
-            "./fm-single-page-design-portfolio/preview.jpg",
+          thumbnail: "./fm-single-page-design-portfolio/preview.jpg",
           altText: "Design Portfolio",
         },
         body: {
@@ -41,14 +40,13 @@
           tags: ["Responsive Navigation", "Color", "Typography"],
         },
         footer: {
-          buildTime: "1:30 Hours",
+          buildTime: "6:30 Hours",
           viewLink: "./fm-single-page-design-portfolio/",
         },
       },
       {
         meta: {
-          thumbnail:
-            "./fm-expenses-chart-component/design/desktop-preview.jpg",
+          thumbnail: "./fm-expenses-chart-component/design/desktop-preview.jpg",
           altText: "Expense Chart Component",
         },
         body: {
@@ -59,7 +57,7 @@
           tags: ["Responsive Navigation", "Color", "Typography"],
         },
         footer: {
-          buildTime: "1:30 Hours",
+          buildTime: "4:30 Hours",
           viewLink: "./fm-expenses-chart-component/",
         },
       },
@@ -713,14 +711,17 @@
 
       const projectDescription = document.createElement("p");
       projectDescription.setAttribute("class", "description");
-      projectDescription.innerHTML = cv.body.tags.map(
-        (tag) => `<span class='tag'> #${tag}</span>`
-      );
+      const tags = cv.body.tags.map((tag) => {
+        return `<span class='tag'> ${tag}</span>`;
+      });
 
+      projectDescription.innerHTML = tags.join('');
+      
       cardBodyEle.appendChild(projectFaviconEle);
       cardBodyEle.appendChild(projectHeading);
       cardBodyEle.appendChild(projectDescription);
-
+      
+      debugger;
       // Card Body
       cardEle.appendChild(cardBodyEle);
 
