@@ -15,8 +15,8 @@ body {
 }
 
 main {
-  width: 75vw;
-  margin: 40px auto;
+  width: 70vw;
+  margin: 16vh auto;
   /* margin: max(max(14vh, 4vw), 10px) auto; */
 }
 
@@ -104,10 +104,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-width: 256px;
-  max-width: 328px;
-  min-height: 354px;
-  max-height: 415px; */
+  width: 256px;
   grid-area: seven;
 }
 
@@ -121,11 +118,7 @@ main {
   flex-direction: column;
   gap: 24px;
   align-self: flex-start;
-
-  /* min-width: 343px;
-    max-width: 544px;
-    min-height: 290px;
-    max-height: 324px; */
+  width: 544px;
   grid-area: one;
 }
 
@@ -137,11 +130,7 @@ main {
   justify-content: start;
   flex-direction: column;
   gap: 24px;
-  min-width: 256px;
-  /*
-  max-width: 343px;
-  min-height: 354px;
-  max-height: 437px; */
+  width: 256px;
   overflow: hidden;
   grid-area: four;
 }
@@ -154,10 +143,7 @@ main {
   justify-content: space-between;
   flex-direction: column;
   gap: 24px;
-  /* min-width: 256px;
-  max-width: 328px;
-  min-height: 354px;
-  max-height: 415px; */
+  width: 256px;
   grid-area: eight;
 }
 
@@ -169,10 +155,8 @@ main {
   justify-content: space-between;
   flex-direction: column;
   gap: 24px;
-  min-width: 343px;
-  max-width: 256px;
-  max-height: 247px;
-  /* min-height: 162px; */
+  width: 256px;
+  height: 247px;
   grid-area: two;
 }
 
@@ -185,10 +169,8 @@ main {
   justify-content: space-between;
   flex-direction: column;
   gap: 24px;
-  min-width: 343px;
-  max-width: 256px;
-  max-height: 247px;
-  /* min-height: 162px; */
+  width: 256px;
+  height: 247px;
   grid-area: three;
 }
 
@@ -200,10 +182,7 @@ main {
   justify-content: space-between;
   flex-direction: column;
   gap: 24px;
-  /* min-width: 343px;
   max-width: 256px;
-  max-height: 247px;
-  min-height: 162px; */
   grid-area: six;
 }
 
@@ -215,10 +194,6 @@ main {
   justify-content: space-between;
   flex-direction: row;
   gap: 24px;
-  /* min-width: 343px;
-  max-width: 544px;
-  min-height: 162px;
-  max-height: 247px; */
   grid-area: five;
 }
 
@@ -241,13 +216,18 @@ main {
   .image-fix {
     width: 100%;
   }
+
   .wrapper > div:nth-child(7) {
     flex-direction: row;
     align-items: center;
   }
+  .wrapper > div:nth-child(2),
+  .wrapper > div:nth-child(3),
+  .wrapper > div:nth-child(7),
   .wrapper > div:nth-child(5),
   .wrapper > div:nth-child(6) {
     max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -278,5 +258,9 @@ main {
   .wrapper > div:nth-child(7) {
     flex-direction: column;
     align-items: start;
+  }
+  .wrapper > div:nth-child(4),
+  .wrapper > div:nth-child(1) {
+    width: 100%;
   }
 }
