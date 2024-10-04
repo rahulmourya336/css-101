@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>News homepage | Project by Rahul Mourya</title>
+  </head>
+  <body id="body">
+    <main>
+      <header>
+        <div class="logo">
+          <img src="./assets/images/logo.svg" alt="Logo" />
+        </div>
+        <nav class="desktop">
+          <p>Home</p>
+          <p>New</p>
+          <p>Popular</p>
+          <p>Trending</p>
+          <p>Categories</p>
+        </nav>
+        <nav class="mobile">
+          <p>
+            <img
+              src="./assets/images/icon-menu.svg"
+              alt="menu icon"
+              onclick="toggleMenu()"
+            />
+          </p>
+          <div class="mobile-nav" id="mobile-nav">
+            <p onclick="toggleMenu()" class="close-icon">
+              <img
+                src="./assets/images/icon-menu-close.svg"
+                alt="menu close icon"
+              />
+            </p>
+            <p class="mt-24">Home</p>
+            <p>New</p>
+            <p>Popular</p>
+            <p>Trending</p>
+            <p>Categories</p>
+          </div>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="hero-image"></div>
+        <div class="sidebar">
+          <p class="text-primary">New</p>
+          <div class="content">
+            <div class="mt-4">
+              <span class="text-l">Hydrogen VS Electric Cars</span>
+              <span class="d-block text-sm mt-4 border-bottom"
+                >Will hydrogen-fueled cars ever catch up to EVs?</span
+              >
+            </div>
+
+            <div class="mt-6">
+              <span class="text-l">The Downsides of AI Artistry</span>
+              <span class="d-block text-sm mt-4 border-bottom"
+                >What are the possible adverse effects of on-demand AI image
+                generation?</span
+              >
+            </div>
+
+            <div class="mt-6">
+              <span class="text-l">Is VC Funding Drying Up?</span>
+              <span class="d-block text-sm mt-4"
+                >Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="heading">
+          <div>
+            <p class="text-xl">The Bright Future of Web 3.0?</p>
+          </div>
+          <div class="box">
+            <p class="text-grey">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <p class="button">Read More</p>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="content-box">
+            <div>
+              <img
+                src="./assets/images/image-retro-pcs.jpg"
+                alt="Retro-pc"
+                height="127"
+                width="100"
+                class="fit-content"
+              />
+            </div>
+            <div class="description">
+              <p class="text-l1">01</p>
+              <p class="text-l2">Reviving Retro PCs</p>
+              <p class="text-l3">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </div>
+
+          <div class="content-box">
+            <div>
+              <img
+                src="./assets/images/image-top-laptops.jpg"
+                alt="Retro-pc"
+                height="127"
+                width="100"
+                class="fit-content"
+              />
+            </div>
+            <div class="description">
+              <p class="text-l1">02</p>
+              <p class="text-l2">Top 10 Laptops of 2022</p>
+              <p class="text-l3">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </div>
+
+          <div class="content-box">
+            <div>
+              <img
+                src="./assets/images/image-gaming-growth.jpg"
+                alt="Retro-pc"
+                height="127"
+                width="100"
+                class="fit-content"
+              />
+            </div>
+            <div class="description">
+              <p class="text-l1">03</p>
+              <p class="text-l2">The Growth of Gaming</p>
+              <p class="text-l3">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+
+  <script>
+    function toggleMenu() {
+      const ele = document.getElementById("mobile-nav");
+      ele.classList.toggle("mobile-nav-show");
+
+      const body = document.getElementById("body");
+      body.classList.toggle("overflow-hidden");
+    }
+  </script>
+</html>

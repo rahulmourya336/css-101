@@ -1,0 +1,265 @@
+:root {
+  --color-Soft-orange: hsl(35, 77%, 62%);
+  --color-Soft-red: hsl(5, 85%, 63%);
+  --color-Off-white: hsl(36, 100%, 99%);
+  --color-Grayish-blue: hsl(233, 8%, 79%);
+  --color-Dark-grayish-blue: hsl(236, 13%, 42%);
+  --color-Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 26px;
+  font-optical-sizing: auto;
+}
+
+main {
+  width: 80vw;
+  margin: 8vh auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+section.hero {
+  margin-top: min(max(32px, 4vw), 55px);
+  display: grid;
+  gap: 30px;
+  grid-template-areas:
+    "one one three three"
+    "one one  three three"
+    "two two three three"
+    "four four four four";
+}
+
+.hero-image {
+  background-image: url("./assets/images/image-web-3-desktop.jpg");
+  grid-area: one;
+  height: 300px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  grid-area: two;
+  gap: min(max(24px, 4vw), 30px);
+}
+
+.sidebar {
+  grid-area: three;
+  padding: 20px;
+  background-color: #000;
+  width: 350px;
+  color: var(--color-Off-white);
+}
+
+.content {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.text-l {
+  font-size: min(max(18px, 4vw), 20px);
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.text-sm {
+  color: var(--color-Grayish-blue);
+  font-size: min(max(12px, 4vw), 15px);
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.d-block {
+  display: block;
+}
+
+.mt-4 {
+  margin-top: 12px;
+}
+
+.mt-6 {
+  margin-top: 18px;
+}
+
+.text-xl {
+  font-size: min(max(32px, 4vw), 56px);
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.border-bottom {
+  padding-bottom: 26px;
+  border-bottom: 1px solid #979797;
+}
+
+.button {
+  color: #000;
+  line-height: 24px;
+  letter-spacing: 4.38px;
+  background-color: var(--color-Soft-red);
+  padding: 10px 25px;
+  font-weight: 600;
+  place-self: flex-start;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.box {
+  display: flex;
+  gap: 29px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.text-primary {
+  color: var(--color-Soft-orange);
+  font-weight: bold;
+  line-height: 40px;
+  font-size: 40px;
+}
+
+.text-grey {
+  color: var(--color-Dark-grayish-blue);
+}
+
+.content-box {
+  display: flex;
+  gap: 14px;
+}
+
+.fit-content {
+  max-width: fit-content;
+}
+
+.text-l1 {
+  color: var(--color-Soft-red);
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.text-l2 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.text-l3 {
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 300;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.footer {
+  grid-area: four;
+  display: flex;
+  gap: 30px;
+}
+
+nav.mobile {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.mobile-nav {
+  position: fixed;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
+  left: 40%;
+  top: 0;
+  width: 100%;
+  padding: 30px 20px;
+  opacity: 0;
+  display: none;
+  box-shadow: -97px 14px 80px rgb(0 0 0 / 0.2);
+  transition: all 0.5s;
+}
+
+.mobile-nav-show {
+  transition: all 0.5s;
+  opacity: 1;
+  display: flex;
+}
+
+.close-icon {
+  place-self: center;
+  text-align: -webkit-center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.mt-24 {
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 475px) {
+  main {
+    width: 95vw;
+    margin: 4vh auto;
+  }
+
+  .hero-image {
+    background-image: url("./assets/images/image-web-3-mobile.jpg");
+  }
+
+  section.hero {
+    margin-top: min(max(32px, 4vw), 55px);
+    display: grid;
+    gap: 30px;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four";
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  nav,
+  .heading,
+  .footer {
+    flex-direction: column;
+  }
+
+  nav.desktop {
+    display: none;
+  }
+
+  nav.mobile {
+    display: flex;
+  }
+}
