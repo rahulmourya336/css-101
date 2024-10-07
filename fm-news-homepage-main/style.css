@@ -52,7 +52,7 @@ section.hero {
   display: flex;
   justify-content: space-between;
   grid-area: two;
-  gap: min(max(24px, 4vw), 30px);
+  gap: min(max(24px, 4vw), 40px);
 }
 
 .sidebar {
@@ -85,6 +85,10 @@ section.hero {
 
 .d-block {
   display: block;
+}
+
+.desktop > p {
+  color: var(--color-Very-dark-blue);
 }
 
 .mt-4 {
@@ -175,6 +179,7 @@ section.hero {
   grid-area: four;
   display: flex;
   gap: 30px;
+  margin-top: min(max(0px, 4vw), 50px);
 }
 
 nav.mobile {
