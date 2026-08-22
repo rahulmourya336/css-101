@@ -45,6 +45,9 @@ hr {
 }
 
 .link {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
   text-decoration: none;
   color: var(--text);
   cursor: pointer;
