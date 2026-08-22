@@ -15,20 +15,91 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="container">
-      <h1>😸 100 Days of CSS | <span class="text-muted">Rahul Mourya</span></h1>
-      <hr />
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-emoji">😸</span>
+          <div class="brand-text">
+            <h1>100 Days of CSS</h1>
+            <p class="text-muted">Rahul Mourya, learning CSS by doing</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <span class="stat-pill" id="project-count">0 builds</span>
+          <a
+            class="btn btn-outline"
+            href="https://github.com/rahulmourya336/css-101"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./assets/github-icon.svg" alt="" class="icon" />
+            GitHub
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="toolbar">
+        <div class="search-wrap">
+          <input
+            id="search-input"
+            type="search"
+            class="search-input"
+            placeholder="Search a build or tag&hellip;"
+            autocomplete="off"
+          />
+        </div>
+        <div class="tag-filters" id="tag-filters"></div>
+      </section>
+
       <div class="projects" id="projects"></div>
-    </div>
+      <p class="empty-state" id="empty-state" hidden>
+        No builds match that search. Try another keyword.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          Built one component at a time &middot;
+          <a
+            class="link"
+            href="https://github.com/rahulmourya336/css-101"
+            target="_blank"
+            rel="noopener"
+            >source on GitHub</a
+          >
+        </p>
+      </div>
+    </footer>
   </body>
   <script>
     const projectList = [
-    {
+      {
+        meta: {
+          thumbnail:
+            "./fm-newsletter-sign-up-with-success-message-main/design/desktop-preview.jpg",
+          altText: "Newsletter sign-up",
+        },
+        body: {
+          favicon: "./favicon-32x32.png",
+          heading: "Newsletter sign-up",
+          github:
+            "https://github.com/rahulmourya336/css-101/tree/master/fm-newsletter-sign-up-with-success-message-main",
+          tags: ["Grid", "Responsive UI"],
+        },
+        footer: {
+          buildTime: "2:30 Hours",
+          viewLink: "./fm-newsletter-sign-up-with-success-message-main/",
+        },
+      },
+      {
         meta: {
           thumbnail: "./fm-news-homepage-main/design/desktop-preview.jpg",
           altText: "News homepage",
@@ -701,19 +772,25 @@
       },
     ];
 
-    const previewProject = (cv) => {
-      console.log("PROJECT TAP", cv);
-    };
+    const cardsContainer = document.getElementById("projects");
+    const emptyState = document.getElementById("empty-state");
+    const projectCountEl = document.getElementById("project-count");
+    const searchInput = document.getElementById("search-input");
+    const tagFiltersEl = document.getElementById("tag-filters");
 
-    const ProjectCards = projectList.reduce((acc, cv) => {
+    let activeTag = null;
+
+    const buildCard = (cv) => {
       const cardEle = document.createElement("div");
       cardEle.setAttribute("class", "card");
-
-      let preview = "";
+      cardEle.dataset.heading = cv.body.heading.toLowerCase();
+      cardEle.dataset.tags = cv.body.tags.join(",").toLowerCase();
 
       const hyperLink = document.createElement("a");
       hyperLink.setAttribute("href", cv.footer.viewLink);
+      hyperLink.setAttribute("class", "preview-link");
 
+      let preview = "";
       if (!cv.meta.thumbnail) {
         const noPreviewEle = document.createElement("h2");
         noPreviewEle.setAttribute("class", "no-preview-available");
@@ -724,11 +801,11 @@
         previewEle.setAttribute("src", cv.meta.thumbnail);
         previewEle.setAttribute("alt", cv.meta.altText);
         previewEle.setAttribute("class", "project-preview");
+        previewEle.setAttribute("loading", "lazy");
         preview = previewEle;
       }
       hyperLink.appendChild(preview);
 
-      // Card Meta
       cardEle.appendChild(hyperLink);
 
       const cardBodyEle = document.createElement("div");
@@ -736,27 +813,27 @@
 
       const projectFaviconEle = document.createElement("img");
       projectFaviconEle.setAttribute("src", cv.body.favicon);
+      projectFaviconEle.setAttribute("alt", "");
+      projectFaviconEle.setAttribute("loading", "lazy");
 
       const projectHeading = document.createElement("p");
       projectHeading.setAttribute("class", "heading");
       projectHeading.innerText = cv.body.heading;
       if (cv.body.github) {
-        projectHeading.innerHTML += ` • <a href='${cv.body.github}' class='link' target="_blank"> <img src='./assets/github-icon.svg' alt="github icon" class="icon" />Github </a>`;
+        projectHeading.innerHTML += ` • <a href='${cv.body.github}' class='link' target="_blank" rel="noopener"> <img src='./assets/github-icon.svg' alt="github icon" class="icon" />Github </a>`;
       }
 
       const projectDescription = document.createElement("p");
       projectDescription.setAttribute("class", "description");
       const tags = cv.body.tags.map((tag) => {
-        return `<span class='tag'> ${tag}</span>`;
+        return `<span class='tag'>${tag}</span>`;
       });
-
       projectDescription.innerHTML = tags.join("");
 
       cardBodyEle.appendChild(projectFaviconEle);
       cardBodyEle.appendChild(projectHeading);
       cardBodyEle.appendChild(projectDescription);
 
-      // Card Body
       cardEle.appendChild(cardBodyEle);
 
       const cardFooterEle = document.createElement("div");
@@ -765,7 +842,6 @@
       const buildTime = document.createElement("p");
       buildTime.innerHTML = `Build Time: ${cv.footer.buildTime}`;
 
-      const actionEle = document.createElement("p");
       const linkEle = document.createElement("a");
       linkEle.setAttribute("href", cv.footer.viewLink);
 
@@ -774,19 +850,61 @@
       actionButton.innerHTML = "View";
 
       linkEle.appendChild(actionButton);
-      actionEle.appendChild(linkEle);
 
       cardFooterEle.appendChild(buildTime);
       cardFooterEle.appendChild(linkEle);
 
-      // Card Footer
       cardEle.appendChild(cardFooterEle);
 
-      acc.push(cardEle);
-      return acc;
-    }, []);
+      return cardEle;
+    };
 
-    const UICard = document.getElementById("projects");
-    ProjectCards.map((project) => UICard.appendChild(project));
+    projectList.forEach((cv) => cardsContainer.appendChild(buildCard(cv)));
+    projectCountEl.innerText = `${projectList.length} builds`;
+
+    // Tag filter chips
+    const allTags = [...new Set(projectList.flatMap((p) => p.body.tags))].sort(
+      (a, b) => a.localeCompare(b)
+    );
+
+    const renderTagChip = (label, value) => {
+      const chip = document.createElement("button");
+      chip.setAttribute("type", "button");
+      chip.setAttribute("class", "chip");
+      chip.dataset.value = value ? value.toLowerCase() : "";
+      chip.innerText = label;
+      chip.addEventListener("click", () => {
+        activeTag = activeTag === chip.dataset.value ? null : chip.dataset.value;
+        [...tagFiltersEl.children].forEach((c) =>
+          c.classList.toggle("chip-active", c === chip && activeTag !== null)
+        );
+        applyFilters();
+      });
+      return chip;
+    };
+
+    tagFiltersEl.appendChild(renderTagChip("All", null));
+    allTags.forEach((tag) => tagFiltersEl.appendChild(renderTagChip(tag, tag)));
+    tagFiltersEl.firstElementChild.classList.add("chip-active");
+
+    const applyFilters = () => {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      [...cardsContainer.children].forEach((card) => {
+        const matchesTag = !activeTag || card.dataset.tags.includes(activeTag);
+        const matchesQuery =
+          !query ||
+          card.dataset.heading.includes(query) ||
+          card.dataset.tags.includes(query);
+        const visible = matchesTag && matchesQuery;
+        card.style.display = visible ? "" : "none";
+        if (visible) visibleCount += 1;
+      });
+
+      emptyState.hidden = visibleCount !== 0;
+    };
+
+    searchInput.addEventListener("input", applyFilters);
   </script>
 </html>
