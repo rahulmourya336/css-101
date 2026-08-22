@@ -1,0 +1,115 @@
+:root {
+  --color-Tomato: hsl(4, 100%, 67%);
+  --color-Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --color-Charcoal-Grey: hsl(235, 18%, 26%);
+  --color-Grey: hsl(231, 7%, 60%);
+  --color-White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  background-color: var(--color-Dark-Slate-Grey);
+  color: var(--color-Dark-Slate-Grey);
+}
+
+main {
+  max-width: min(max(95dvw, 4vw), 50dvw);
+  height: 10vdh;
+  margin: 14dvh auto;
+  padding: 1.5rem;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  background-color: var(--color-White);
+  border-radius: 2.1em;
+}
+
+.illustration {
+  background-position: right;
+  width: 50%;
+  background-size: contain;
+  background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+  background-repeat: no-repeat;
+}
+
+.heading {
+  font-size: min(max(40px, 4vw), 56px);
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list > p {
+  display: inline-flex;
+  gap: 12px;
+  align-items: start;
+}
+
+.content-wrapper {
+  width: 50%;
+}
+
+.input-wrapper {
+  margin-top: 40px;
+}
+
+label {
+  font-size: 12px;
+  line-height: 150%;
+  display: block;
+  font-weight: bold;
+}
+
+.form-control {
+  height: 48px;
+  border-radius: 8px;
+  padding: 5px 12px;
+  border: 1px solid var(--color-Grey);
+  width: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.button {
+  width: 100%;
+  height: 56px;
+  color: var(--color-White);
+  background-color: var(--color-Dark-Slate-Grey);
+  text-align: center;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 475px) {
+  main {
+    max-width: 100dvw;
+    height: 100dvh;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 0%;
+    flex-wrap: wrap-reverse;
+  }
+
+  .illustration {
+    max-width: 100%;
+    background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+  }
+
+  .content-wrapper {
+    width: 100%;
+  }
+}
